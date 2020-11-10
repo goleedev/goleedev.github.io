@@ -1,0 +1,72 @@
+/* FOOTER */
+.footer-container {
+    margin: 5% auto;
+}
+
+h1 {
+    font-family: Mark Pro Heavy !important;
+    color: #232340;
+    margin: 0;
+}
+
+footer #copy,
+.footer-content {
+    text-align: center;
+    color: #232340;
+    font-size: 18px;
+}
+
+footer #copy {
+    color: #333;
+    font-size: 12px;
+}
+
+.footer-brand {
+    text-align: center;
+    margin: 0 auto !important;
+}
+
+.footer-brand img {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px;
+}
+
+.footer-brand span {
+    color: #5468e7 !important;
+    font-size: 72px;
+    margin-left: -5px !important;
+}
+
+#fill-email {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    background-color: #fff !important;
+    padding: 0 5px;
+}
+  
+#golee-email {
+    text-decoration: none;
+    color: #5468e7 !important;
+    border-bottom: 3px #5468e7 solid !important;
+    font-weight: 400;
+    font-size: 1.4rem;
+    padding-right: 5px;
+    box-shadow: inset 0px 0px 0px #5468e7 !important;
+    transition: all 0.5s !important;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+  
+#golee-email:hover {
+    color: #fafafa !important;
+    box-shadow: inset 0px -80px 0px #5468e7 !important;
+}
+
+.waving {
+    font-size: 24px;
+}

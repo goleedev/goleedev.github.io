@@ -1,0 +1,36 @@
+/* Navigation */
+.navbar {
+    margin: 10px auto;
+}
+
+.nav-link {
+    color: #232340 !important;
+    font-size: 18px !important;
+}
+
+.navbar-brand h1 {
+    font-family: Mark Pro Heavy !important;
+    color: #232340;
+    margin: 0;
+}
+
+.navbar-brand img {
+    width: 48px !important;
+    height: 48px !important;
+    margin-right: 10px;
+}
+
+.navbar-brand span {
+    color: #5468e7 !important;
+    font-size: 72px;
+    margin-left: -5px !important;
+}
+
+.nav-link:hover {
+    color: #5468e7 !important;
+    font-weight: bold !important;
+}
+
+@media (max-width: 992px) { 
+    
+}
