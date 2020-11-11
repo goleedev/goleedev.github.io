@@ -7,13 +7,29 @@
     font-size: 20px !important;
 }
 
+.archive-container th {
+    font-family: Mark Pro Medium !important;
+}
+
+.archive-container th,
+.archive-container td {
+    color: #232340 !important;
+}
+
 .archive-container {
     margin: 5% auto !important;
+    margin-top: 0 !important;
     padding: 0 !important;
+}
+
+.archive-container h1 {
+    position: relative;
+    left: 10%;
+    margin-bottom: 10%;
 }
 
 @media (max-width: 992px) {
     .archive-container {
-        margin: 20% auto;
+        margin: 10% auto !important;
     }
 }
