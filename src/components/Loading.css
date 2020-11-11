@@ -17,11 +17,13 @@
     border-radius: 50px;
 }
 
-body {
+.page {
   font-family: Mark Pro Medium !important;
   text-align: center;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   text-transform: uppercase;
   font-weight: normal;
   font-style: normal;

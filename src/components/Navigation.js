@@ -25,13 +25,10 @@ const Navigation = () => {
                     <a className="nav-link" href="#work">work</a>		
                 </Nav.Item>
                 <Nav.Item>
-                    <a className="nav-link" href="#about">about</a>		
-                </Nav.Item>
-                <Nav.Item>
                     <a className="nav-link" href="#contact">contact</a>
                 </Nav.Item>
                 <Nav.Item>
-                    <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374">resume</a>
+                    <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374" target="_blank" rel="noopener noreferrer">resume</a>
                 </Nav.Item>
             </Nav>
             <div id="mySidenav" className="sidenav">
@@ -40,7 +37,7 @@ const Navigation = () => {
                 <a className="nav-link" href="#about">about</a>		
                 <a className="nav-link" href="#work">work</a>		
                 <a className="nav-link" href="#contact">contact</a>		
-                <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374">resume</a>
+                <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374" target="_blank" rel="noopener noreferrer">resume</a>
             </div>
             <div id="main">
                 <span onClick={openNav}>☰</span>

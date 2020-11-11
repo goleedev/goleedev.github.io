@@ -32,7 +32,7 @@ body {
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: #fafafa;
 }
 
 .closebtn {
@@ -101,7 +101,7 @@ body {
         padding: 0;
     }
     #mySidenav {
-        filter: drop-shadow(3px 3px 10px #000);
+        filter: drop-shadow(3px 3px 6px #555);
     }
     #main span {
         cursor: pointer;
@@ -130,6 +130,7 @@ body {
         margin-top: 10px;
     }
     #mySidenav .btn-outline-dark:hover {
+        border: none !important;
         background-color: #5468e7 !important;
         color: #232340 !important;
     }

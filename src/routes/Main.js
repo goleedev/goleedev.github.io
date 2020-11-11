@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from 'components/Navigation';
 import About from 'components/About';
 import Work from 'components/Work';
@@ -7,10 +7,17 @@ import Footer from 'components/Footer';
 import me from "../images/my-pic.png";
 import line from "../images/line.png";
 import './Main.css';
+import Loading from 'components/Loading';
 
 const Main = () => {
+    const [isLoaded, setIsLoaded] = useState(false);
+    useEffect(() => {
+        setIsLoaded(true);
+    }, []);
     return (
         <div className="main">
+        { isLoaded ?
+        <>
         <Navigation />
         <div className="header-container container row">
             <div className="header-left col-lg-7">
@@ -28,8 +35,10 @@ const Main = () => {
         <Work id="work" />    
         <Contact id="contact" />    
         <Footer />    
+        </>
+        : <Loading /> } 
         </div>
-    )
+    );
 }
 
 export default Main;

@@ -1,24 +1,26 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import me from '../images/dev pic.jpeg';
 import './About.css';
 
 const About = () => {
     return (
-        <div id="about" className="about-container container-fluid">
-            <div className="about-content container">
-                <div className="about-left col-md-4">
-                    <img />
+        <div id="about" className="about-container col-lg-12 ">
+            <div className="about-content container row">
+                <div className="about-left col-lg-6">
+                    <img src={me} alt="dev-pic" />
+                    <div className="about-right-shadow"></div>
                 </div>
-                <div className="about-left col-md-8">
+                <div className="about-right col-lg-6">
                     <h4>01.</h4>
                     <h2>About Me</h2>
                     <p>
-                    Hi👋 I'm Goeun Lee, but I go by GO 🏃, a software engineer based in Seoul, S. Korea.
-                    I enjoy create things that live on/off the internet — which explains my pottery hoppy🍶.
-                    My ultimate goal as a developer is to build on quality components and performant web applications for both users and fellow team mates.
-                    
-                    Here are a few technologies I've been working with recently:
+                        Hi👋 I'm Goeun Lee, but I go by <b>GO 🏃</b>, a software engineer based in Seoul, S. Korea. <br />
+                        I enjoy create things that live on/off the internet — which explains my pottery hoppy🍶. <br />
+                        My ultimate goal as a developer is to build on <b>quality components and performant web applications</b> for both users and fellow team mates.<br />
+                        <br />
+                        Here are a few technologies I've been working with recently:
                     </p>
                     <div className="row">
                         <ul>
@@ -35,12 +37,9 @@ const About = () => {
                         </ul>
                     </div>
                 </div>
-                <div>
-
-                </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default About;

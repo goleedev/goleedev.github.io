@@ -1,0 +1,19 @@
+/* Archive */
+.nav-goback {
+    position: absolute;
+    top: 5%;
+    right: 10%;
+    cursor: pointer;
+    font-size: 20px !important;
+}
+
+.archive-container {
+    margin: 5% auto !important;
+    padding: 0 !important;
+}
+
+@media (max-width: 992px) {
+    .archive-container {
+        margin: 20% auto;
+    }
+}

@@ -45,7 +45,7 @@ footer #copy {
     appearance: none;
     background: transparent;
     border: none;
-    background-color: #fff !important;
+    background-color: #fafafa !important;
     padding: 0 5px;
 }
   
@@ -70,17 +70,4 @@ footer #copy {
 
 .waving {
     font-size: 24px;
-}
-
-.scrollToTopBtn {
-    width: 35px;
-    height: 35px;
-    /* place it at the bottom right corner */
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    /* keep it at the top of everything else */
-    z-index: 100;
-    /* hide it at first */
-    display: none;
 }

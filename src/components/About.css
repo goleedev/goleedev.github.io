@@ -8,49 +8,118 @@
     margin-bottom: 5% !important;
 }
 
-.about-left {
+.about-content {
+    width: 80% !important;
+    margin: 0 auto !important;
     padding: 0 !important;
 }
 
-.about-left h2 {
-    font-family: Mark Pro Heavy !important;
-    color: #fff;
-    font-size: 36px;
+.about-right {
+    position: relative;
+    right: 0 !important;
+    padding: 0 !important;
 }
 
-.about-left p {
+.about-right b {
+    color: #b5dacd;
+}
+
+.about-right h4 {
+    font-family: Mark Pro Medium !important;
+    color: #ffce79;
+}
+
+.about-right h2 {
+    font-family: Mark Pro Heavy !important;
+    color: #fafafa;
+    font-size: 36px;
+    margin-bottom: 5%;
+}
+
+.about-right p {
     font-family: 'Nanum Gothic', sans-serif !important;
     text-transform: initial;
-    color: #fff;
-    font-size: 24px;
+    color: #fafafa;
+    font-size: 18px;
+    margin-bottom: 5%;
 }
 
-.about-left ul {
+.about-right ul {
     list-style: none !important;
-    width: 40%;
+    width: 50%;
     padding: 0;
     margin-right: 10px;
-    font-size: 18px;
     margin: 3% 0;
 }
 
-.about-left li {
+.about-right li {
     cursor: pointer;
     color: #b5dacd !important;
     width: 90%;
+    font-size: 16px;
     margin-bottom: 5px;
     padding: 5px 10px;
 }
 
-.about-left span {
+.about-right span {
     font-family: Mark Pro Heavy !important;
     background-color: #fff;
     color: #5468e7;
     font-size: 12px;
-    margin-left: 10px;
+    margin-right: 10px;
     padding: 3px;
 }
 
-.about-content {
-    padding: 0 !important;
+.about-left {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.about-left img {
+    border: 3px solid #b5dacd;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 40px !important;    
+    margin-right: 50px !important;   
+    transition: all 0.2s ease-out;
+    z-index: 9999;
+}
+
+.about-left img:hover {
+    transform: translate(10px, 10px); 
+}
+
+.about-left div {
+    position: absolute;
+    border: 3px solid #b5dacd;
+    width: 350px;
+    height: 350px;
+    margin-left: 20px !important;  
+}
+
+@media (max-width: 1050px) {
+    .about-right ul {
+        width: 50%;
+    }
+    .about-right li {
+        width: 100%;
+        font-size: 12px;
+    }
+    .about-right {
+        margin: 5% auto !important;
+    }
+    .about-left {
+        justify-content: center !important;
+        margin: 5% auto;
+    }
+    .about-left div {
+        margin-left: 0px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-container {
+        margin-bottom: 20% !important;
+    }
 }

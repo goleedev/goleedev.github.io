@@ -1,1 +1,35 @@
 /* WORK */
+.work-container {
+    margin-bottom: 5% !important;    
+}
+
+.work-container  h4 {
+    font-family: Mark Pro Medium !important;
+    color: #ffce79;
+    margin: 0 auto !important;
+}
+
+.work-container  h2 {
+    font-family: Mark Pro Heavy !important;
+    color: #232340;
+    font-size: 36px;
+}
+
+.view-more {
+    color: #5468e7 !important;
+    border-bottom: 2px solid #5468e7 !important;
+    transition: all 0.4s ease-out;
+    padding: 5px !important;
+    margin-bottom: 5%;
+}
+
+.view-more:hover {
+    color: #232340 !important;
+    border-bottom: 2px solid #232340 !important;
+}
+
+@media (max-width: 992px) {
+    .work-container {
+        margin-bottom: 20% !important;
+    }
+}

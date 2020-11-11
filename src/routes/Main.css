@@ -37,6 +37,7 @@
 
 .header-left .btn:hover {
     background-color: #c898e4;
+    box-shadow: 0px 4px 8px -3px #c898e4;
 }
 
 .header-right {
@@ -59,6 +60,7 @@
 .work-btn {
     cursor: pointer;
     z-index: 9999999;
+    box-shadow: 0px 4px 8px -3px #5468e7;
 }
 
 @media (max-width: 992px) {
