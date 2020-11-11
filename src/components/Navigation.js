@@ -1,30 +1,51 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
-import { Navbar, Nav } from "react-bootstrap";
+import React from 'react';
+import { Nav } from "react-bootstrap";
 import logo from "../images/logo.png";
 import './Navigation.css';
 
 const Navigation = () => {
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+        document.getElementById("main").style.marginLeft = "300px";
+    }
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+    }
     return (
-        <Navbar expand="lg" className="container">
-            <Navbar.Brand href="/">
+        <div className="container">
+            <a className="navbar-brand" href="/">
                 <h1><img src={logo} alt="logo" />golee<span>.</span></h1>
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-                <Nav className="nav-items">
-                    <Nav.Item>
-                        <a href="#about">about</a>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Link className="nav-link" to="/blog">blog</Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <a href="#contact">contact</a>
-                    </Nav.Item>
-                </Nav>
-            </Navbar.Collapse>
-        </Navbar>
+            </a>
+            <Nav className="nav-items">
+                <Nav.Item>
+                    <a className="nav-link" href="#about">about</a>		
+                </Nav.Item>
+                <Nav.Item>
+                    <a className="nav-link" href="#work">work</a>		
+                </Nav.Item>
+                <Nav.Item>
+                    <a className="nav-link" href="#about">about</a>		
+                </Nav.Item>
+                <Nav.Item>
+                    <a className="nav-link" href="#contact">contact</a>
+                </Nav.Item>
+                <Nav.Item>
+                    <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374">resume</a>
+                </Nav.Item>
+            </Nav>
+            <div id="mySidenav" className="sidenav">
+                {/* // eslint-disable-next-line */}
+                <a className="nav-link" href="#!" className="closebtn" onClick={closeNav}>×</a>
+                <a className="nav-link" href="#about">about</a>		
+                <a className="nav-link" href="#work">work</a>		
+                <a className="nav-link" href="#contact">contact</a>		
+                <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/Goeun-Lee-ec4f8ae8c84b46b5a8f2e1322ede3374">resume</a>
+            </div>
+            <div id="main">
+                <span onClick={openNav}>☰</span>
+            </div>
+        </div>   
     );
 };
 

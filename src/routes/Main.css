@@ -1,0 +1,93 @@
+/* MAIN */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.header-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden !important;
+    color: #232340 !important;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    margin: 5% auto !important;
+}
+
+.header-left {
+    color: #232340 !important;
+}
+
+.header-left h1 {
+    font-family: Mark Pro Heavy !important;
+    text-transform: uppercase;
+    font-size: 56px;
+}
+
+.header-left p {
+    font-family: 'Nanum Gothic', sans-serif !important;
+    text-transform: lowercase !important;
+    font-size: 18px;
+    width: 80%;
+}
+
+.header-left .btn {
+    font-family: Mark Pro Medium !important;
+    background-color: #5468e7;
+    color: #fafafa !important;
+}
+
+.header-left .btn:hover {
+    background-color: #c898e4;
+}
+
+.header-right {
+    margin-top: -5% !important;
+}
+
+.header-right .my-pic {
+    position: relative;
+    top: 200px;
+    right: 40%;
+}
+
+.header-right .my-line {
+    position: relative;
+    top: -300px;
+    right: 0;
+    z-index: -1;
+}
+
+.work-btn {
+    cursor: pointer;
+    z-index: 9999999;
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        margin: 20% auto !important;
+    }
+    .header-left h1 {
+        font-size: 48px;
+    }  
+    .header-right .my-pic {
+        left: 20%;
+        top: 0;
+    }
+    .header-right .my-line {
+        position: absolute;
+        top: 0;
+        right: -100px;
+    }  
+}
+
+@media (max-width: 768px) {
+    .header-right .my-pic {
+        width: 115%;
+        top: 20px;
+        left: 0;
+    }
+    .header-right .my-line {
+        width: 115%;
+        top: 20px;
+        right: -150px;
+    }
+}

@@ -1,6 +1,51 @@
 /* Navigation */
-.navbar {
-    margin: 10px auto;
+body {
+    transition: background-color .5s;
+}
+
+.nav-items {
+    position: absolute;
+    right: 10% !important;
+    top: 5% !important;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #232340;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px !important;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
 }
 
 .nav-link {
@@ -31,6 +76,61 @@
     font-weight: bold !important;
 }
 
-@media (max-width: 992px) { 
-    
+.btn-outline-dark {
+    color: #5468e7 !important;
+    border-color: #5468e7 !important;
+}
+
+.btn-outline-dark:hover {
+    border-color: #232340 !important;
+    color: #232340 !important;
+    background-color: transparent !important;
+}
+
+#main span {
+    display: none;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media (max-width: 992px) {
+    #main {
+        padding: 0;
+    }
+    #mySidenav {
+        filter: drop-shadow(3px 3px 10px #000);
+    }
+    #main span {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        top: 30px !important;
+        right: 10% !important;
+    } 
+    .nav-items {
+        display: none !important;
+    }
+    #mySidenav .nav-link {
+        text-align: center;
+        display: block;
+        color: #95c4ec !important;
+        padding: 10px 0 !important;
+        width: 300px !important;
+    }
+    #mySidenav .btn-outline-dark {
+        margin: auto;
+        width: 95% !important;
+    }
+    #mySidenav .btn-outline-dark {
+        color: #95c4ec !important;
+        border-color: #95c4ec !important;
+        margin-top: 10px;
+    }
+    #mySidenav .btn-outline-dark:hover {
+        background-color: #5468e7 !important;
+        color: #232340 !important;
+    }
 }

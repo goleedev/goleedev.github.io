@@ -1,0 +1,56 @@
+/* ABOUT */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+.about-container {
+    background-color: #232340;
+    padding: 5% 0;
+    margin: 0 auto !important;
+    margin-bottom: 5% !important;
+}
+
+.about-left {
+    padding: 0 !important;
+}
+
+.about-left h2 {
+    font-family: Mark Pro Heavy !important;
+    color: #fff;
+    font-size: 36px;
+}
+
+.about-left p {
+    font-family: 'Nanum Gothic', sans-serif !important;
+    text-transform: initial;
+    color: #fff;
+    font-size: 24px;
+}
+
+.about-left ul {
+    list-style: none !important;
+    width: 40%;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 18px;
+    margin: 3% 0;
+}
+
+.about-left li {
+    cursor: pointer;
+    color: #b5dacd !important;
+    width: 90%;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+}
+
+.about-left span {
+    font-family: Mark Pro Heavy !important;
+    background-color: #fff;
+    color: #5468e7;
+    font-size: 12px;
+    margin-left: 10px;
+    padding: 3px;
+}
+
+.about-content {
+    padding: 0 !important;
+}
