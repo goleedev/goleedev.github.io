@@ -10,6 +10,7 @@ const AppRouter = () => {
         <Router>
             <Switch>
                 <Route exact path="/" component={Main} />
+                <Route exact path="/home" component={Main} />
                 <Route exact path="/archive" component={Archive} />
                 <Route component={NotFound} />
             </Switch>

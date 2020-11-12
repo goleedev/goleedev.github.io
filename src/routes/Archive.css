@@ -1,4 +1,6 @@
 /* Archive */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
 .nav-goback {
     position: absolute;
     top: 5%;
@@ -28,8 +30,27 @@
     margin-bottom: 10%;
 }
 
+td > a {
+    color: #232340;
+    margin-right: 5px;
+}
+
+td > a:hover {
+    color: #5468e7;
+}
+
+.built {
+    font-family: 'Source Code Pro', monospace !important;
+    font-size: 14px;
+}
+
 @media (max-width: 992px) {
     .archive-container {
         margin: 10% auto !important;
+    }
+    td > a {
+        margin: 0 !important;
+        margin-left: -2px !important;
+        margin-right: 2px !important;
     }
 }

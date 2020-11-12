@@ -32,7 +32,7 @@ const Contact = () => {
             { isLoaded ?
             <>
             <div className="get-in-touch-content col-lg-12 row">
-                <form encType="multipart/form-data" method="post" onSubmit={onSubmit} className="contact-form row col-lg-6">
+                <form encType="multipart/form-data" method="post" onSubmit={onSubmit} className="contact-form row col-lg-6" autoComplete="off">
                     <div className="form-field col-lg-12">
                         <input name="name" id="name" className="input-text js-input" type="text" required />
                         <label className="label" htmlFor="name">Name</label>

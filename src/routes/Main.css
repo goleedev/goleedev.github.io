@@ -42,6 +42,7 @@
 
 .header-right {
     margin-top: -5% !important;
+    z-index: -9999;
 }
 
 .header-right .my-pic {
