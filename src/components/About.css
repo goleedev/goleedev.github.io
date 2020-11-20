@@ -2,16 +2,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
 
 .about-container {
-    background-color: #232340;
-    padding: 5% 0;
+    filter: drop-shadow(3px 3px 6px #555);
+    padding: 5% 0 !important;
+    padding-top: 2%;
     margin: 0 auto !important;
     margin-bottom: 5% !important;
+}
+
+.about-inner {
+    overflow: hidden;
+    padding: 0;
+}
+
+.about-bg {
+    position: absolute;
+    background-color: #232340;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100% !important;
+    height: 110%;
+    padding: 0 !important;
+    transform: skewY(-5deg);
+    transform-origin: top left;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
 }
 
 .about-content {
     width: 80% !important;
     margin: 0 auto !important;
     padding: 0 !important;
+    padding-bottom: 5% !important;
 }
 
 .about-right {
@@ -25,13 +48,13 @@
 }
 
 .about-right h4 {
-    font-family: Mark Pro Medium !important;
     color: #ffce79;
+    font-size: 300 !important;
 }
 
 .about-right h2 {
-    font-family: Mark Pro Heavy !important;
     color: #fafafa;
+    font-weight: 700 !important;
     font-size: 36px;
     margin-bottom: 5%;
 }
@@ -62,10 +85,10 @@
 }
 
 .about-right span {
-    font-family: Mark Pro Heavy !important;
     background-color: #fff;
     color: #5468e7;
     font-size: 12px;
+    font-weight: 700 !important;
     margin-right: 10px;
     padding: 3px;
 }
@@ -86,6 +109,19 @@
     transition: all 0.2s ease-out;
     z-index: 9999;
 }
+
+.in {
+    width: 80%;
+    margin-bottom: 200px;
+  }
+  
+  .header {
+    fill:url(#linear-gradient);
+  }
+  
+  .footer {
+    fill: url(#linear-gradient);
+  }
 
 .about-left img:hover {
     transform: translate(10px, 10px); 
@@ -124,4 +160,31 @@
     .about-container {
         margin-bottom: 20% !important;
     }
+    .about-right ul {
+        padding-left: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        background-color: #232340;
+        margin-bottom: 20% !important;
+    }
+    .about-bg {
+        background-color: transparent;
+        transform: skewY(0deg);
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+    .about-content {
+        padding-bottom: 0;
+    }
+    .about-left img {
+        width: 300px;
+        height: 300px;
+    }    
+    .about-left div {
+        width: 300px;
+        height: 300px;
+    }   
 }

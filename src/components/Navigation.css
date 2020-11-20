@@ -5,19 +5,20 @@ body {
 
 .nav-items {
     position: absolute;
+    height: 10% !important;
     right: 10% !important;
     top: 5% !important;
 }
 
 .sidenav {
+    position: fixed;
+    overflow-x: hidden;
+    background-color: #232340;
     height: 100%;
     width: 0;
-    position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #232340;
-    overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
@@ -54,8 +55,8 @@ body {
 }
 
 .navbar-brand h1 {
-    font-family: Mark Pro Heavy !important;
     color: #232340;
+    font-weight: 700 !important;
     margin: 0;
 }
 
@@ -73,7 +74,6 @@ body {
 
 .nav-link:hover {
     color: #5468e7 !important;
-    font-weight: bold !important;
 }
 
 .btn-outline-dark {
@@ -102,11 +102,13 @@ body {
     }
     #mySidenav {
         filter: drop-shadow(3px 3px 6px #555);
+        z-index: 9999999;
     }
     #main span {
         cursor: pointer;
         display: block;
         position: absolute;
+        font-size: 36px;
         top: 30px !important;
         right: 10% !important;
     } 

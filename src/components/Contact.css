@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 
 .get-in-touch  h4 {
-    font-family: Mark Pro Medium !important;
     color: #ffce79;
+    font-weight: 300 !important;
     margin: 0 auto !important;
 }
 
 .get-in-touch  h2 {
-    font-family: Mark Pro Heavy !important;
     color: #232340;
+    font-weight: 700 !important;
     font-size: 36px;
     margin-bottom: 5%;
 }
@@ -72,15 +72,16 @@
 
 .contact-form .submit-container {
     text-align: center !important;
+    margin-bottom: 0;
 }
 
 .contact-form .submit-btn {
     cursor: pointer;
-    font-family: Mark Pro Medium !important;
     text-transform: uppercase !important;
     background-color: #5468e7;
     box-shadow: 0px 4px 8px -3px #5468e7;
     color: #fafafa !important;
+    font-weight: 300 !important;
     width:200px;
 }
 

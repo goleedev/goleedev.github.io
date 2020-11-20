@@ -1,5 +1,11 @@
 /* NOT FOUND */
+.notfound-container {
+    margin: 13% auto;
+}
+
 .page-wrapper {
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 246px;
     margin: 3% auto;
@@ -169,12 +175,23 @@
 .error {
     font-family: 'Sacramento', cursive !important;
     text-transform: lowercase;
+    text-align: center;
     background-color: #b5dacd;
     color: #232340;
-    margin: 30px 0;
+    font-size: 28px;
+    width: 50%;
+    margin: 30px auto;
 }
 
 .error-goback {
+    position: relative;
     cursor: pointer;
+    left: 10%;
     font-size: 20px !important;
+}
+
+@media (max-width: 992px) {
+    .notfound-container {
+        margin: 25% auto;
+    }
 }

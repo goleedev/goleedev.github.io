@@ -6,35 +6,36 @@ import './About.css';
 
 const About = () => {
     return (
-        <div id="about" className="about-container col-lg-12 ">
-            <div className="about-content container row">
-                <div className="about-left col-lg-6">
-                    <img src={me} alt="dev-pic" />
-                    <div className="about-right-shadow"></div>
-                </div>
-                <div className="about-right col-lg-6">
-                    <h4>01.</h4>
-                    <h2>About Me</h2>
-                    <p>
-                        Hi👋 I'm Goeun Lee, but I go by <b>GO 🏃</b>, a software engineer based in Seoul, S. Korea. <br />
-                        I enjoy create things that live on/off the internet — which explains my pottery hoppy🍶. <br />
-                        My ultimate goal as a developer is to build on <b>quality components and performant web applications</b> for both users and fellow team mates.<br />
-                        <br />
-                        Here are a few technologies I've been working with recently:
-                    </p>
-                    <div className="row">
-                        <ul>
-                            <li><FontAwesomeIcon icon={faPlay} /> React.js</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> JavaScript (ES6 +)</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> HTML5 & CSS3</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> TypeScript<span>🚧 Studying...</span></li>
-                        </ul>
-                        <ul>
-                            <li><FontAwesomeIcon icon={faPlay} /> Firebase</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> Node.js</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> Express.js</li>
-                            <li><FontAwesomeIcon icon={faPlay} /> Git/Github</li>
-                        </ul>
+        <div data-aos="fade-up" data-aos-delay="150" id="about" className="about-container col-lg-12">
+            <div className="about-bg"></div>
+                <div className="about-content container row">
+                    <div className="about-left col-lg-6">
+                        <img data-aos="fade-right" data-aos-delay="200" src={me} alt="dev-pic" />
+                        <div data-aos="fade-right" data-aos-delay="400" className="about-right-shadow"></div>
+                    </div>
+                    <div data-aos="fade-left" data-aos-delay="300" className="about-right col-lg-6">
+                        <h4>01.</h4>
+                        <h2>About Me</h2>
+                        <p>
+                            Hi 👋 I'm Goeun Lee, but I go by <b>GO 🏃</b>, a software engineer based in Seoul, S. Korea. <br />
+                            I enjoy create things that live on/off the internet — which explains my pottery hoppy🍶. <br />
+                            My ultimate goal as a developer is to build on <b>quality components and performant web applications</b> for both users and fellow team mates.<br />
+                            <br />
+                            Here are a few technologies I've been working with recently 👇
+                        </p>
+                        <div className="row">
+                            <ul>
+                                <li><FontAwesomeIcon icon={faPlay} /> React.js</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> JavaScript (ES6 +)</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> HTML5 & CSS3</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> TypeScript<span>🚧 Studying...</span></li>
+                            </ul>
+                            <ul>
+                                <li><FontAwesomeIcon icon={faPlay} /> Firebase</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> Node.js</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> Express.js</li>
+                                <li><FontAwesomeIcon icon={faPlay} /> Git/Github</li>
+                            </ul>
                     </div>
                 </div>
             </div>

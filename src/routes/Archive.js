@@ -55,7 +55,7 @@ const Archive = () => {
                     <td className="built" colSpan="3">React · JavaScript · Github</td>
                     <td>
                         <a href="https://github.com/goleedev/golee"><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href=""><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                        <a href="https://goleedev.github.io/"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </td>
                 </tr>
                 <tr>
@@ -63,8 +63,8 @@ const Archive = () => {
                     <td colSpan="3">Portfolio v1</td>
                     <td className="built" colSpan="3">HTML · CSS · JavaScript · Github</td>
                     <td>
-                        <a href="https://github.com/goleedev/goleedev.github.io"><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href="https://goleedev.github.io/"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                        <a href="https://github.com/goleedev/old8"><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href="https://goleedev.github.io/old8/"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </td>
                 </tr>
                 <tr>
@@ -89,6 +89,7 @@ const Archive = () => {
                     <td colSpan="3">Covid-19 Tracker Clone</td>
                     <td className="built" colSpan="3">React · ChartJS · HTML · CSS · Netlify</td>
                     <td>
+                        <a href="https://github.com/goleedev/coronaTracker"><FontAwesomeIcon icon={faGithub} /></a>
                         <a href="https://coronatrackergoleedev.netlify.app/"><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
                     </td>
                 </tr>

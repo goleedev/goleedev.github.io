@@ -18,7 +18,6 @@
 }
 
 .page {
-  font-family: Mark Pro Medium !important;
   text-align: center;
   display: flex;
   align-items: center;
@@ -31,6 +30,7 @@
   color: #5468e7 !important;
   margin: 0;
   height: 100vh;
+  font-weight: 300 !important;
   width: 100%;
   font-size: 36px !important;
 }

@@ -5,11 +5,13 @@
     display: flex;
     align-items: center;
     overflow: hidden !important;
+    font-family: 'Ubuntu', sans-serif;
     color: #232340 !important;
-    height: 100%;
+    height: 100vh;
     padding: 0;
     margin: 0;
     margin: 5% auto !important;
+    margin-top: 0 !important;
 }
 
 .header-left {
@@ -17,8 +19,8 @@
 }
 
 .header-left h1 {
-    font-family: Mark Pro Heavy !important;
     text-transform: uppercase;
+    font-weight: 700 !important;
     font-size: 56px;
 }
 
@@ -30,9 +32,9 @@
 }
 
 .header-left .btn {
-    font-family: Mark Pro Medium !important;
     background-color: #5468e7;
     color: #fafafa !important;
+    font-size: 300 !important;
 }
 
 .header-left .btn:hover {
@@ -47,7 +49,7 @@
 
 .header-right .my-pic {
     position: relative;
-    top: 200px;
+    top: 180px;
     right: 40%;
 }
 
@@ -65,9 +67,6 @@
 }
 
 @media (max-width: 992px) {
-    .header-container {
-        margin: 20% auto !important;
-    }
     .header-left h1 {
         font-size: 48px;
     }  
@@ -83,6 +82,9 @@
 }
 
 @media (max-width: 768px) {
+    .header-container {
+        margin: 20% auto !important;
+    }
     .header-right .my-pic {
         width: 115%;
         top: 20px;

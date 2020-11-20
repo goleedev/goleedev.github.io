@@ -33,7 +33,7 @@ const Navigation = () => {
             </Nav>
             <div id="mySidenav" className="sidenav">
                 {/* // eslint-disable-next-line */}
-                <a className="nav-link" href="#!" className="closebtn" onClick={closeNav}>×</a>
+                <a className="nav-link" href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
                 <a className="nav-link" href="#about">about</a>		
                 <a className="nav-link" href="#work">work</a>		
                 <a className="nav-link" href="#contact">contact</a>		

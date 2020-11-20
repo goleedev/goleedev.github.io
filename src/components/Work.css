@@ -1,17 +1,19 @@
 /* WORK */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
 .work-container {
-    margin-bottom: 5% !important;    
+    margin-bottom: 5% !important;  
 }
 
 .work-container  h4 {
-    font-family: Mark Pro Medium !important;
     color: #ffce79;
     margin: 0 auto !important;
+    font-weight: 300 !important;
 }
 
 .work-container  h2 {
-    font-family: Mark Pro Heavy !important;
     color: #232340;
+    font-weight: 700 !important;
     font-size: 36px;
 }
 
@@ -26,4 +28,122 @@
 .view-more:hover {
     color: #232340 !important;
     border-bottom: 2px solid #232340 !important;
+}
+
+.product-card {
+    background-color: #fafafa;
+    max-width: 550px;
+    min-height: 400px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+    box-shadow: 8px 12px 30px #b3b3b3;
+    color: #333;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+}
+
+.product-sub {
+    color: #ffce79;
+    background-color: #232340;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.product-stack span {
+    font-family: 'Source Code Pro', monospace !important;
+    background-color: #ffce79;
+    color: #232340;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.product-stack {
+    margin-bottom: 15px;
+}
+  
+.product-details {
+    float: left;
+    width: 65%;
+    height: 100%;
+    padding: 5%;
+}
+
+.product-details h1 {
+    color: #232340;
+    font-weight: 700;
+    width: 75%;
+    margin-bottom: 25px;
+}
+
+.product-details a {
+    margin-top: 5px;
+    margin-right: 5px;
+    color: #5468e7;
+    z-index: 999999;
+}
+  
+.product-image {
+    position: absolute;
+    z-index: -1;
+    right: -100px;
+    top: -20px;
+}
+
+.product-image img {
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 8px 12px 30px #b3b3b3;
+}
+
+@media (max-width: 992px) {
+    .work-container {
+        margin-bottom: 20% !important;
+    }
+}
+  
+@media (max-width: 768px) {
+    .work-container {
+        margin-bottom: 20%;
+    }
+    .product-sub {
+        font-size: 14px;
+    }    
+    .product-details h1 {
+        font-size: 34px;
+    }
+    .product-details {
+      width: 60%;
+      z-index: 1;
+    }
+    .product-image img {
+      width: 90%;
+      top: -20px;
+    }
+}
+@media (max-width: 540px) {
+    .product-details h1 {
+        font-size: 30px;
+    }
+    .product-image img {
+        width: 80%;
+        top: -20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .product-image {
+        text-align: center;
+        position: relative !important;
+        top: 0;
+        left: 0;
+    }
+    .product-image img {
+        width: 100%;
+    }
+    .product-details {
+        width: 100%;
+    }
 }
