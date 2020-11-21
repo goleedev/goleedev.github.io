@@ -6,9 +6,9 @@ import './About.css';
 
 const About = () => {
     return (
-        <div data-aos="fade-up" data-aos-delay="150" id="about" className="about-container col-lg-12">
+        <div id="about" className="about-container col-lg-12">
             <div className="about-bg"></div>
-                <div className="about-content container row">
+                <div data-aos="fade-up" data-aos-delay="150" className="about-content container row">
                     <div className="about-left col-lg-6">
                         <img data-aos="fade-right" data-aos-delay="200" src={me} alt="dev-pic" />
                         <div data-aos="fade-right" data-aos-delay="400" className="about-right-shadow"></div>

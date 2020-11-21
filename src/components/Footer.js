@@ -30,6 +30,7 @@ const Footer = () => {
             <ScrollTop 
             speed={50}
             text="☝️"
+            distance={150}
             style={{ backgroundColor: "transparent", border: "none" }}
             className="footer-scroll"
             /> 

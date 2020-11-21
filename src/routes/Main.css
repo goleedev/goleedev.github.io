@@ -7,7 +7,7 @@
     overflow: hidden !important;
     font-family: 'Ubuntu', sans-serif;
     color: #232340 !important;
-    height: 100vh;
+    height: 80vh;
     padding: 0;
     margin: 0;
     margin: 5% auto !important;
@@ -49,15 +49,53 @@
 
 .header-right .my-pic {
     position: relative;
-    top: 180px;
+    overflow: hidden;
+    width: 600px;
+    z-index: 99;
+    top: 250px;
     right: 40%;
 }
 
 .header-right .my-line {
-    position: relative;
-    top: -300px;
-    right: 0;
-    z-index: -1;
+    position: absolute;
+    width: 120%;
+    top: 100px;
+    right: 0px;
+    z-index: 0;
+}
+
+.my-line path {
+    fill: transparent;
+    stroke-dasharray: 850.209716796875;
+    stroke-dashoffset: 850.209716796875;
+    -webkit-animation: drawLine 2s ease-in-out forwards;
+    animation: drawLine 2s ease-in-out forwards;
+}
+
+@-webkit-keyframes drawLine {
+    100% {
+    stroke-dashoffset: 0;
+    }
+}
+
+@keyframes drawLine {
+    100% {
+    stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes fillIt {
+    100% {
+    fill: #ffce79;
+    stroke: transparent;
+    }
+}
+
+@keyframes fillIt {
+    100% {
+    fill: #ffce79;
+    stroke: transparent;
+    }
 }
 
 .work-btn {
@@ -67,32 +105,41 @@
 }
 
 @media (max-width: 992px) {
+    .header-container {
+        overflow: visible !important;
+    }
+    .header-left {
+        margin-top: 20%;
+    }
     .header-left h1 {
         font-size: 48px;
     }  
     .header-right .my-pic {
-        left: 20%;
-        top: 0;
+        width: 90%;
+        right: -300px !important;
+        top: -150px;
     }
     .header-right .my-line {
         position: absolute;
-        top: 0;
+        top: -250px;
         right: -100px;
+        width: 70%;
     }  
 }
 
 @media (max-width: 768px) {
     .header-container {
-        margin: 20% auto !important;
+        height: 70vh;
+        margin: 15% auto !important;
     }
     .header-right .my-pic {
-        width: 115%;
-        top: 20px;
-        left: 0;
+        width: 120%;
+        top: -50px;
+        left: 50px;
     }
     .header-right .my-line {
         width: 115%;
-        top: 20px;
+        top: -150px;
         right: -150px;
     }
 }
