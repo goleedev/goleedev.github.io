@@ -28,7 +28,7 @@ const About = () => {
                                 <li><FontAwesomeIcon icon={faPlay} /> React.js</li>
                                 <li><FontAwesomeIcon icon={faPlay} /> JavaScript (ES6 +)</li>
                                 <li><FontAwesomeIcon icon={faPlay} /> HTML5 & CSS3</li>
-                                <li><FontAwesomeIcon icon={faPlay} /> TypeScript<span>🚧 Studying...</span></li>
+                                <li><FontAwesomeIcon icon={faPlay} /> Next.js/TypeScript<span>🚧 Studying...</span></li>
                             </ul>
                             <ul>
                                 <li><FontAwesomeIcon icon={faPlay} /> Firebase</li>
