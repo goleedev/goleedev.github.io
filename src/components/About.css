@@ -113,15 +113,15 @@
 .in {
     width: 80%;
     margin-bottom: 200px;
-  }
-  
-  .header {
+}
+
+.header {
     fill:url(#linear-gradient);
-  }
-  
-  .footer {
+}
+
+.footer {
     fill: url(#linear-gradient);
-  }
+}
 
 .about-left img:hover {
     transform: translate(10px, 10px); 
@@ -162,6 +162,11 @@
     }
     .about-right ul {
         padding-left: 10px;
+    }
+
+    .about-bg {
+        border-bottom-left-radius: 20% 10%;
+        border-bottom-right-radius: 20% 10%;
     }
 }
 
