@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollTop from 'react-scrolltop-button';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn, faGithub, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link } from 'react-router-dom';
 import logo from "../images/logo.png";
 import './Footer.css';
@@ -24,7 +24,6 @@ const Footer = () => {
                 <div className="footer-social row">
                     <a href="https://www.linkedin.com/in/goleedev/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a>
                     <a href="https://github.com/goleedev" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
-                    <a href="https://www.youtube.com/channel/UCtZ1vB4zqdPDerUmxFRLFaw?view_as=subscriber" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faYoutube} /></a>
                 </div>
             </div>
             <ScrollTop 
