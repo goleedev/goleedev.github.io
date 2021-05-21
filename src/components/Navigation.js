@@ -30,9 +30,6 @@ const Navigation = () => {
                 <Nav.Item>
                     <a className="nav-link" href="#contact">contact</a>
                 </Nav.Item>
-                <Nav.Item>
-                    <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/GO-Lee-c61265e14ec44505a3b01ea7a6077550" target="_blank" rel="noopener noreferrer">resume</a>
-                </Nav.Item>
             </Nav>
             <div id="mySidenav" className="sidenav">
                 <a className="nav-link" href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
@@ -40,7 +37,6 @@ const Navigation = () => {
                 <a className="nav-link" href="#work">work</a>		
                 <a className="nav-link" href="https://goleedev-blog.netlify.app/">blog</a>		
                 <a className="nav-link" href="#contact">contact</a>		
-                <a className="btn btn-outline-dark nav-link" href="https://www.notion.so/GO-Lee-c61265e14ec44505a3b01ea7a6077550" target="_blank" rel="noopener noreferrer">resume</a>
             </div>
             <div id="main">
                 <span onClick={openNav}>☰</span>

@@ -48,63 +48,31 @@ const Work = () => {
                 <Link to="/archive">
                     <span className="btn view-more"><FontAwesomeIcon icon={faFolderOpen} /> more projects</span>
                 </Link>
-                <div data-aos="fade-left" data-aos-delay="200" className="product-card">
-                    <div className="product-details">
-                        <span className="product-sub">Featured Project · {data[0].type}</span>
-                        <h1>{data[0].project}</h1>
-                        <p>{data[0].description}</p>
-                        <div className="product-stack">
-                            <span>{data[0].stack[0]}</span>
-                            <span>{data[0].stack[1]}</span>
-                            <span>{data[0].stack[2]}</span>
+                {data.map((d, i) => {
+                    return (
+                        <div id={`${i}-data`} data-aos={ i !== 1 ? "fade-left" : "fade-right"} data-aos-delay="200" className="product-card">
+                            <div className="product-details">
+                                <span className="product-sub">Featured Project · {d.type}</span>
+                                <h1>{d.project}</h1>
+                                <p>{d.description}</p>
+                                <div className="product-stack">
+                                    {d.stack.map(s => {
+                                        return (
+                                            <span>{s}</span>
+                                        )
+                                    })}
+                                </div>
+                                <div>
+                                    <a href={d.github}><FontAwesomeIcon icon={faGithub} /></a>
+                                    <a href={d.website}><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
+                                </div>
+                            </div>
+                            <div className="product-image">
+                                <img src={d.image} alt={`${i}-image`}/>
+                            </div>
                         </div>
-                        <div>
-                            <a href={data[0].github}><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href={data[0].website}><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                        </div>
-                    </div>
-                    <div className="product-image">
-                        <img src={project1} alt="project1"/>
-                    </div>
-                </div>
-                <div data-aos="fade-right" data-aos-delay="200" className="product-card">
-                    <div className="product-details">
-                        <span className="product-sub">Featured Project · {data[1].type}</span>
-                        <h1>{data[1].project}</h1>
-                        <p>{data[1].description}</p>
-                        <div className="product-stack">
-                            <span>{data[1].stack[0]}</span>
-                            <span>{data[1].stack[1]}</span>
-                            <span>{data[1].stack[2]}</span>
-                        </div>
-                        <div>
-                            <a href={data[1].github}><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href={data[1].website}><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                        </div>
-                    </div>
-                    <div className="product-image">
-                        <img src={project2} alt="project2"/>
-                    </div>
-                </div>
-                <div data-aos="fade-left" data-aos-delay="200" className="product-card">
-                    <div className="product-details">
-                        <span className="product-sub">Featured Project · {data[2].type}</span>
-                        <h1>{data[2].project}</h1>
-                        <p>{data[2].description}</p>
-                        <div className="product-stack">
-                            <span>{data[2].stack[0]}</span>
-                            <span>{data[2].stack[1]}</span>
-                            <span>{data[2].stack[2]}</span>
-                        </div>
-                        <div>
-                            <a href={data[2].github}><FontAwesomeIcon icon={faGithub} /></a>
-                            <a href={data[2].website}><FontAwesomeIcon icon={faExternalLinkAlt} /></a>
-                        </div>
-                    </div>
-                    <div className="product-image">
-                        <img src={project3} alt="project3"/>
-                    </div>
-                </div>
+                    )
+                })}
             </div>
         </div>
     );

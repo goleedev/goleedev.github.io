@@ -28,10 +28,10 @@
 
 .contact-form .input-text {
     display: block;
-    border-bottom: 2px solid #5468e7;
     width: 100%;
     height: 36px;
-    border-width: 0 0 2px 0 !important;
+    border-width: 0;
+    border-bottom: 2px solid #5468e7;
     font-size: 24px;
     line-height: 30px;
 }
