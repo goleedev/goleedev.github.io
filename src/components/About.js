@@ -36,7 +36,7 @@ const About = () => {
           <p>
             Hi 👋 I'm Goeun Lee, but I go by <b>GO 🏃</b>, a frontend engineer
             based in Seoul, S. Korea. <br />
-            I enjoy creating things that live on/off the internet, which
+            I enjoy creating things that live on/off the internet -- which
             explains my pottery hobby🍶. <br />
             My ultimate goal as a developer is to build on{' '}
             <b>quality components and performant web applications</b> for both
