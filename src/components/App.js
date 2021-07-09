@@ -13,7 +13,7 @@ function App() {
   }, []);
   return (
     <>
-      { isLoaded ? <AppRouter /> : <Loading />}
+      { isLoaded ? <Loading /> : <Loading />}
     </>
   );
 };

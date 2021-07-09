@@ -1,15 +1,16 @@
 /* LOADING */
 .progress-bar {
-    background: #fafafa !important;
-    border: 5px solid #5468e7 !important;
+    background: #fafafa;
+    border: 5px solid #5468e7;
     width: 300px;
-    height: 40px;
+    height: 30px;
     border-radius: 50px;
+    margin-top: 20px;
 }
 
 .progress {
     box-sizing: border-box;
-    background-color: #b5dacd !important;
+    background-color: #b5dacd;
     animation: loading 5s linear 2s infinite;
     animation-name: loading;
     width: 20%;
@@ -24,15 +25,14 @@
   justify-content: center;
   flex-direction: column;
   text-transform: uppercase;
-  font-weight: normal;
   font-style: normal;
-  background: #fafafa !important;
-  color: #5468e7 !important;
+  background: #fafafa ;
+  color: #5468e7;
   margin: 0;
   height: 100vh;
-  font-weight: 300 !important;
+  font-weight: 300;
   width: 100%;
-  font-size: 36px !important;
+  font-size: 36px;
 }
 
 @keyframes loading {

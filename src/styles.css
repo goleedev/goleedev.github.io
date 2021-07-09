@@ -24,8 +24,8 @@ button {
 
 a:active, 
 a:focus {
-    -moz-outline-style: none !important; 
     border: none !important;
+    -moz-outline-style: none !important;
     outline-style: none !important;
     outline: 0 !important;
 }
@@ -52,5 +52,5 @@ button:focus {
 }
 
 ::selection {
-    background-color: #b5dacd !important;
+    background-color: #FEE9AF !important;
 }

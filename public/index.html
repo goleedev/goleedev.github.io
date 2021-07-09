@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="GO Lee's Developer Portfolio Website"
+      content="GO Lee's Portfolio Website"
     />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">  
     <title>GO Lee | Developer</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script>
-      var viewportmeta = document.querySelector('meta[name="viewport"]');
-      if (viewportmeta)
-      {
-        if (screen.width < 375)
-        {
-          var newScale = screen.width / 375;
+      let viewportmeta = document.querySelector('meta[name="viewport"]');
+      if (viewportmeta) {
+        if (screen.width < 375) {
+          let newScale = screen.width / 375;
           viewportmeta.content = 'width=375, minimum-scale=' + newScale + ', maximum-scale=1.0, user-scalable=no, initial-scale=' + newScale + '';
-        }
-        else
-        {
+        } else {
           viewportmeta.content = 'width=device-width, maximum-scale=1.0, initial-scale=1.0';
         }
       }

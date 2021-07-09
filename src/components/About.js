@@ -24,7 +24,7 @@ const About = () => {
             data-aos="fade-right"
             data-aos-delay="400"
             className="about-right-shadow"
-          ></div>
+          />
         </div>
         <div
           data-aos="fade-left"

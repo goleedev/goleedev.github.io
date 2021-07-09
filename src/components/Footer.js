@@ -1,9 +1,9 @@
 import React from "react";
-import ScrollTop from "react-scrolltop-button";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+
 import logo from "../images/logo.png";
 import "./Footer.css";
 
@@ -54,13 +54,6 @@ const Footer = () => {
           </a>
         </div>
       </div>
-      <ScrollTop
-        speed={50}
-        text="☝️"
-        distance={150}
-        style={{ backgroundColor: "transparent", border: "none" }}
-        className="footer-scroll"
-      />
       <p id="copy" className="col-lg-12">
         &copy; Copyright {new Date().getFullYear()} GO Lee. All rights reserved.
       </p>
