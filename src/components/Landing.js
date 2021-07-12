@@ -13,7 +13,7 @@ const Container = styled.div`
   overflow: hidden !important;
   width: 100vw;
   height: 100vh;
-  //padding: 60px;
+  padding: 60px;
   margin: 0;
 
   font-family: 'Ubuntu', sans-serif;
@@ -140,7 +140,7 @@ const Landing = () => {
         <Container>
             <Navigation />
             <HeaderImgContainer>
-                <img src={me} alt="my-pic" />
+                <img src={me} alt="my-pic"/>
             </HeaderImgContainer>
             <HeaderContent>
                 <HeaderSubTitle>Hi, I’m GO 🤘</HeaderSubTitle>

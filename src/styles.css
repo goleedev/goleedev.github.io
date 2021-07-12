@@ -31,8 +31,7 @@ html {
 
 html, body {
     margin: 0;
-    padding: 0;
-    overflow-x: visible !important;
+    overflow-x: hidden !important;
 }
 
 #root {
@@ -48,6 +47,8 @@ button {
 a:active, 
 a:focus {
     border: none !important;
+    -moz-outline-style: none !important;
+    outline-style: none !important;
     outline: 0 !important;
 }
 

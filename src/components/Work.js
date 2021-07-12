@@ -16,8 +16,8 @@ const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100%;
-  //padding: 60px 60px 0;
-  //margin: 0 auto;
+  padding: 60px 60px 0;
+  margin: 0 auto;
 
   ${mq['sm']} {
     padding: 30px 30px 0;

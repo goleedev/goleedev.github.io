@@ -11,7 +11,8 @@ const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100%;
-  //padding: 60px;
+  padding: 60px 60px 0;
+  margin: 0 auto;
   
   ${mq['sm']} {
     padding: 30px;
@@ -19,7 +20,7 @@ const Container = styled.div`
 `
 
 const AboutHeader = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 10%;
 `
 
@@ -33,12 +34,12 @@ const AboutTitle = styled.h2`
 
 const AboutContentContainer = styled.div`
   max-width: 800px;
-  width: 100%;
+  width: 80%;
   padding: 60px 0;
+  ${Center};
 
   ${mq['sm']} {
     width: 100%;
-    padding: 30px 0;
   }
 `
 

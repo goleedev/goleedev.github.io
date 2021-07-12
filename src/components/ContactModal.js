@@ -6,8 +6,6 @@ import {css} from "@emotion/react";
 import {boxShadow, Center, color, mq} from "../theme";
 
 const modalOpenStyle = ({ openModal }) => css`
-  border: solid 1px ${color.white};
-  border-radius: 10px;
   padding: 16px;
   cursor: pointer;
   ${openModal === true &&
@@ -85,11 +83,11 @@ const ContactForm = styled.form`
   .input-text {
     display: block;
     width: 100%;
-    height: 60px;
+    height: 32px;
     border-width: 0;
     border-bottom: 2px solid ${color.appleBlue};
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 18px;
   }
   
   .input-text:focus {
@@ -120,7 +118,7 @@ const ContactInputContainer = styled.div`
 const ContactFormField = styled.div`
   position: relative;
   text-align: left;
-  margin: 32px 0;
+  margin: 48px 0;
 
   .js-input option {
     font-size: 12px;
@@ -128,14 +126,14 @@ const ContactFormField = styled.div`
 `
 
 const ContactFormLabel = styled.label`
-    position: absolute;
-    color: ${color.deepGrey};
-    bottom: 24px;
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: 300;
-    cursor: text;
-    transition: transform .2s ease-in-out;
+  position: absolute;
+  color: ${color.deepGrey};
+  bottom: 24px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 300;
+  cursor: text;
+  transition: transform .2s ease-in-out;
 `
 
 const ContactBtnContainer = styled.div`
@@ -180,6 +178,14 @@ const ContactSubmitBtn = styled.input`
   }
 `
 
+const Alert = styled.div`
+  display: none;
+  margin: 0 auto;
+  width: 80%;
+  height: 30px;
+  background-color: ${color.appleRed};
+`
+
 const ContactModal = (props) => {
     const {open, close} = props;
 
@@ -205,6 +211,7 @@ const ContactModal = (props) => {
             { open ? (
                 <ContactContainer id="contact">
                     <ContactTitle>🎉 Let's Get in Touch! 🎉</ContactTitle>
+                    <Alert id="alert" />
                     <ContactContentContainer>
                         <ContactForm encType="multipart/form-data" method="post" onSubmit={onSubmit}autoComplete="off">
                             <ContactInputContainer>
