@@ -1,47 +1,68 @@
 import React from 'react';
-import { Nav } from "react-bootstrap";
-import logo from "../images/logo.png";
-import './Navigation.css';
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+
+import { color, mq } from "../theme";
+
+const Container = styled.div`
+  transition: background-color .5s;
+`
+
+const NavItems = styled.div`
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  height: 60px;
+  left: 60px;
+  top: 60px;
+
+  ${mq['sm']} {
+    left: 30px;
+    top: 30px;
+  }
+`
+
+const NavLink = styled.a`
+  color: ${color.deepGrey};
+  font-size: 18px;
+  padding-right: 20px;
+  
+  :hover {
+    color: ${color.appleBlue};
+  }
+`
+
+const NavGithub = styled.a`
+  position: absolute;
+  height: 60px;
+  right: 60px;
+  top: 60px;
+  color: ${color.deepGrey};
+  font-size: 18px;
+
+  :hover {
+    color: ${color.appleBlue};
+  }
+
+  ${mq['sm']} {
+    right: 30px;
+    top: 30px;
+  }
+`
 
 const Navigation = () => {
-    function openNav() {
-        document.getElementById("mySidenav").style.width = "300px";
-        document.getElementById("main").style.marginLeft = "300px";
-    }
-    function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-    }
     return (
-        <div className="container">
-            <a className="navbar-brand" href="/">
-                <h1><img src={logo} alt="logo" />golee<span>.</span></h1>
-            </a>
-            <Nav className="nav-items">
-                <Nav.Item>
-                    <a className="nav-link" href="#about">about</a>		
-                </Nav.Item>
-                <Nav.Item>
-                    <a className="nav-link" href="#work">work</a>		
-                </Nav.Item>
-                <Nav.Item>
-                    <a className="nav-link" href="https://golee-blog.netlify.app/">blog</a>
-                </Nav.Item>
-                <Nav.Item>
-                    <a className="nav-link" href="#contact">contact</a>
-                </Nav.Item>
-            </Nav>
-            <div id="mySidenav" className="sidenav">
-                <a className="nav-link" href="javascript:void(0)" className="closebtn" onClick={closeNav}>×</a>
-                <a className="nav-link" href="#about">about</a>		
-                <a className="nav-link" href="#work">work</a>		
-                <a className="nav-link" href="https://goleedev-blog.netlify.app/">blog</a>		
-                <a className="nav-link" href="#contact">contact</a>		
-            </div>
-            <div id="main">
-                <span onClick={openNav}>☰</span>
-            </div>
-        </div>   
+        <Container>
+            <NavItems>
+                <NavLink  href="#about">about</NavLink>
+                <NavLink href="#work">work</NavLink>
+                <NavLink href="https://golee.tech/">blog</NavLink>
+            </NavItems>
+            <NavGithub href="https://github.com/goleedev">
+                <FontAwesomeIcon icon={faGithub} /> golee.dev
+            </NavGithub>
+        </Container>
     );
 };
 

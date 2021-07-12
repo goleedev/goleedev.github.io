@@ -1,10 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { css, keyframes } from '@emotion/react';
 
-import './Loading.css';
-
-const Layout = styled.div`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,29 +36,29 @@ const Progress = styled.div`
   margin: 0;
   padding: 0;
   background-color: #0084FF;
-  z-index: -1;
-`
-
-const loading = keyframes`
-  0% {
-    width: 0%;
-  }
-  87.5% {
-    width: 100%;
+  animation: loading 1s ease infinite;
+  
+  @keyframes loading {
+    0% {
+      width: 10%;
+    }
+    50% {
+      width: 30%;
+    }
+    87.5% {
+      width: 100%;
+    }
   }
 `
 
 const Loading = () => {
     return (
-        <Layout>
+        <Container>
             <span>loading</span>
             <ProgressBar>
-                <Progress css={css`
-                  animation: ${loading} 1s ease infinite;
-                `}
-                />
+                <Progress />
             </ProgressBar>
-        </Layout>
+        </Container>
     );
 };
 

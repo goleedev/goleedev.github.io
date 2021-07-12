@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom/cjs/react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,8 +7,90 @@ import {
   faExternalLinkAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import logo from "../images/logo.png";
-import "./Archive.css";
+
+import archiveData from "../archiveData";
+import { color, mq } from "../theme";
+
+const ArchiveContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px;
+  
+  table {
+    ${mq["sm"]} {
+      margin: 0 !important;
+      margin-left: -2px !important;
+      margin-right: 2px !important;
+      font-size: 12px !important;
+    }
+  }
+
+  th {
+    font-weight: 300;
+  }
+
+  th,
+  td {
+    padding: 10px 0;
+    color: ${color.deepGrey};
+
+    ${mq["sm"]} {
+      font-size: 10px !important;
+      padding: 10px 2px;
+    }
+  }
+
+  td > a {
+    color: ${color.regularGrey};
+    margin-right: 5px;
+    
+    ${mq["sm"]} {
+      font-size: 10px;
+      padding-right: 2px;
+    }
+  }
+
+  td > a:hover {
+    color: ${color.appleBlue};
+  }
+`
+
+const ArchiveHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 60px;
+`
+
+const ArchiveTitle = styled.h2`
+  margin: 0;
+  color: ${color.deepGrey};
+  font-weight: bold;
+  user-select: none;
+  
+  span {
+    color: ${color.appleBlue} !important;
+    font-size: 48px;
+    margin-left: 0 !important;
+  }
+`
+
+const ArchiveBack = styled.p`
+  position: relative;
+  right: 0;
+  cursor: pointer;
+  font-size: 18px;
+  
+  &:hover {
+    color: ${color.appleBlue};
+  }
+`
+
+const ArchiveBuilt = styled.td`
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+
+`
 
 const Archive = () => {
   const history = useHistory();
@@ -16,149 +99,61 @@ const Archive = () => {
     history.goBack();
   };
   return (
-    <>
-      <div className="archive-container container row">
-        <a className="navbar-brand" href="/">
-          <h1>
-            <img src={logo} alt="logo" />
-            Archive<span>.</span>
-          </h1>
-        </a>
-        <p className="nav-goback" onClick={onGoBack}>
-          <FontAwesomeIcon icon={faArrowLeft} /> Back
-        </p>
-        <table className="table table-borderless">
-          <thead>
-            <tr>
-              <th scope="col">Year</th>
-              <th colSpan="3" scope="col">
-                Title
-              </th>
-              <th colSpan="3" scope="col">
-                Built with
-              </th>
-              <th scope="col">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">2021</th>
-              <td colSpan="3">TypeChain</td>
-              <td className="built" colSpan="3">
-                TypeScript
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/typechain">
+    <ArchiveContainer>
+      <ArchiveHeader>
+        <ArchiveTitle>
+          Archive<span>.</span>
+        </ArchiveTitle>
+      </ArchiveHeader>
+      <ArchiveBack onClick={onGoBack}>
+        Back <FontAwesomeIcon icon={faArrowLeft} />
+      </ArchiveBack>
+      <table className="table table-borderless">
+        <thead>
+          <tr>
+            <th scope="col">Year</th>
+            <th colSpan="3" scope="col">
+              Title
+            </th>
+            <th colSpan="2" scope="col">
+              Built with
+            </th>
+            <th scope="col">Link</th>
+          </tr>
+        </thead>
+        <tbody>
+        {archiveData.map((data, i) => {
+          return (
+          <tr key={`${i}-archive`}>
+            <th scope="row">{data.year}</th>
+            <td colSpan="3">{data.title}</td>
+            <ArchiveBuilt colSpan="2">
+              {data.built.map((b, i) => {
+                if (i !== data.built.length - 1) {
+                 return `${b} · `
+                } else {
+                  return `${b}`
+                }
+              })}
+            </ArchiveBuilt>
+            <td>
+              {data.github &&
+                <a href={data.github}>
                   <FontAwesomeIcon icon={faGithub} />
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Twitter Clone</td>
-              <td className="built" colSpan="3">
-                Firebase · React · JavaScript · Github
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/nwitter">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://goleedev.github.io/nwitter/#/">
+              }
+              {data.link &&
+                <a href={data.link}>
                   <FontAwesomeIcon icon={faExternalLinkAlt} />
                 </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Ceramic Oh</td>
-              <td className="built" colSpan="3">
-                Firebase · React · JavaScript · CSS
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/ohsujin-ceramic">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://ohsujin-ceramic.web.app/">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Portfolio v2</td>
-              <td className="built" colSpan="3">
-                React · JavaScript · Github
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/golee">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://goleedev.github.io/">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Portfolio v1</td>
-              <td className="built" colSpan="3">
-                HTML · CSS · JavaScript · Github
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/old8">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://goleedev.github.io/old8/">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Watchin'</td>
-              <td className="built" colSpan="3">
-                MongoDB · Express · React · Node · Movie DB API · Heroku
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/movie-app">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://watchin-app.herokuapp.com/">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Just Browsin'</td>
-              <td className="built" colSpan="3">
-                MongoDB · Express · React · Node · Movie DB API
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/justbrowsin">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2020</th>
-              <td colSpan="3">Covid-19 Tracker Clone</td>
-              <td className="built" colSpan="3">
-                React · ChartJS · HTML · CSS · Netlify
-              </td>
-              <td>
-                <a href="https://github.com/goleedev/coronaTracker">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="https://coronatrackergoleedev.netlify.app/">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </>
+              }
+            </td>
+          </tr>
+          )}
+        )}
+        </tbody>
+      </table>
+    </ArchiveContainer>
   );
 };
 

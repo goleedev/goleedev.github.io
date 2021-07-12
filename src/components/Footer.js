@@ -1,63 +1,149 @@
 import React from "react";
+import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
-import logo from "../images/logo.png";
-import "./Footer.css";
+import {color, defaultFont, smallFont, Center, mq} from '../theme';
+
+const Container = styled.footer`
+  width: 100vw;
+  height: 20%;
+  margin: 5% auto;
+`
+
+const FooterContent = styled.div`
+  ${Center};
+`
+
+const FooterTitle = styled.h2`
+  margin: 0;
+  color: ${color.deepGrey};
+  font-weight: bold;
+  user-select: none;
+
+  span {
+    color: ${color.appleBlue} !important;
+    font-size: 48px;
+    margin-left: 0 !important;
+  }
+
+  ${mq["sm"]} {
+    font-size: 28px !important;
+    
+    span {
+      font-size: 36px;
+    }
+  }
+`
+const FooterSub = styled.p`
+  margin-bottom: 5%;
+  ${defaultFont};
+
+  ${mq["sm"]} {
+    margin-bottom: 3%;
+  }
+`
+
+const FooterSocial = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 20px auto;
+
+  a {
+    margin: 0 10px;
+    color: ${color.appleBlue};
+  }
+
+  ${mq["sm"]} {
+    margin: 10px auto;
+  }
+`
+
+const FooterCopyright = styled.p`
+  margin-bottom: 5%;
+  ${smallFont};
+  color: ${color.regularGrey};
+`
+
+const FooterContact = styled.button`
+  padding: 0 5px;
+  line-height: 24px;
+  border: none;
+  background-color: ${color.white};
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+`
+
+const FooterHere = styled.a`
+  padding-right: 5px;
+  text-decoration: none;
+  color: ${color.appleBlue} !important;
+  border-bottom: 3px ${color.appleLightYellow} solid;
+  box-shadow: inset 0px 0px 0px ${color.appleLightYellow} !important;
+  transition: all 0.5s !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  
+  &:hover {
+    color: ${color.deepGrey} !important;
+    box-shadow: inset 0px -80px 0px ${color.appleLightYellow} !important;
+  }
+`
 
 const Footer = () => {
   return (
-    <footer className="footer-container container">
-      <div className="col-lg-12">
-        <Link className="footer-brand" to="/">
-          <h1>
-            <img src={logo} alt="logo" />
-            golee<span>.</span>
-          </h1>
+    <Container>
+      <FooterContent>
+        <Link to="/">
+          <FooterTitle>
+            golee<span>.</span>dev
+          </FooterTitle>
         </Link>
-        <p className="footer-content">
-          I’m available for interesting projects.
-          <br />
-          Contact me
-          <button type="button" id="fill-email">
-            <a id="golee-email" href="#contact">
-              @here
-            </a>
-            <span className="waving" role="img" aria-label="hand">
-              👋
-            </span>
-          </button>
-        </p>
-        <div className="footer-social row">
+        <FooterSocial>
           <a
-            href="https://www.linkedin.com/in/goleedev/"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/goleedev/"
+              target="_blank"
+              rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faLinkedinIn} />
           </a>
           <a
-            href="https://github.com/goleedev"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://github.com/goleedev"
+              target="_blank"
+              rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} />
           </a>
           <a
-            href="https://maily.so/1step"
-            target="_blank"
-            rel="noopener noreferrer"
+              href="https://maily.so/1step"
+              target="_blank"
+              rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faNewspaper} />
           </a>
-        </div>
-      </div>
-      <p id="copy" className="col-lg-12">
-        &copy; Copyright {new Date().getFullYear()} GO Lee. All rights reserved.
-      </p>
-    </footer>
+        </FooterSocial>
+        <FooterSub>
+          I’m available for interesting projects.
+          <br />
+          Contact me
+          <FooterContact>
+            <FooterHere>
+              @here
+            </FooterHere>
+            🎉
+          </FooterContact>
+        </FooterSub>
+
+        <FooterCopyright>
+          &copy; Copyright {new Date().getFullYear()} GO Lee. All rights reserved.
+        </FooterCopyright>
+      </FooterContent>
+    </Container>
   );
 };
 
