@@ -13,21 +13,13 @@ const Container = styled.div`
   overflow: hidden !important;
   width: 100vw;
   height: 100vh;
-  padding: 60px;
   margin: 0;
-
-  font-family: 'Ubuntu', sans-serif;
   color: ${color.deepGrey};
-
-  ${mq['sm']} {
-    padding: 30px;
-  }
 `
 
 const HeaderImgContainer = styled.div`
   display: flex;
   justify-content: center;
-  ${Center};
   margin-top: 10% !important;
   
   background-color: ${color.appleLightYellow};
@@ -69,7 +61,7 @@ const HeaderImgContainer = styled.div`
 `
 
 const HeaderContent = styled.div`
-  padding-top: 10%;
+  padding-top: 5%;
   text-align: center;
   color: ${color.deepGrey};
 `
