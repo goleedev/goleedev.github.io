@@ -1,7 +1,7 @@
 import React from 'react';
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
-import { Center, color, mq } from "../theme";
+import { color, mq } from '../theme';
 import me from '../assets/images/memoji2.png';
 
 const Container = styled.div`
@@ -11,18 +11,19 @@ const Container = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100%;
-  padding: 60px 60px 0;
   margin: 0 auto;
-  
-  ${mq['sm']} {
-    padding: 30px;
-  }
-`
+`;
 
 const AboutHeader = styled.div`
+  position: relative;
+  left: 60px;
   width: 100%;
   height: 10%;
-`
+
+  ${mq['md']} {
+    left: 30px;
+  }
+`;
 
 const AboutTitle = styled.h2`
   width: 100%;
@@ -30,76 +31,71 @@ const AboutTitle = styled.h2`
   font-weight: 700;
   font-family: 'SF Pro Bold', sans-serif;
   font-size: 36px;
-`
+`;
 
 const AboutContentContainer = styled.div`
   max-width: 800px;
   width: 80%;
   padding: 60px 0;
-  ${Center};
 
-  ${mq['sm']} {
-    width: 100%;
+  ${mq['md']} {
+    width: 90%;
+    padding: 30px 0;
   }
-`
+`;
 
 const AboutContent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  text-align: left;
+  padding: 30px 0;
   margin: 0 auto;
-  padding: 30px;
-  
+  text-align: left;
+
   border-radius: 20px;
   font-size: 18px;
   background-color: ${color.lightGrey};
 
-  ${mq['sm']} {
+  ${mq['md']} {
     flex-direction: column;
     align-items: center;
     font-size: 16px;
   }
-`
+`;
 
 const AboutContentImg = styled.img`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   margin-bottom: 10px;
-  
-  position: relative;
-  left: -10px;
-  
-  ${mq['sm']} {
-    width: 150px;
-    height: 150px;
-    
-    left: 0;
+
+  ${mq['md']} {
+    width: 120px;
+    height: 120px;
   }
-`
+`;
 
 const AboutImessage = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 180px;
   width: 100%;
   font-size: 16px;
-  padding-right: 30px;
-  
+
   p {
-    border-radius: 1.15rem;
-    line-height: 1.25;
-    max-width: 90%;
-    padding: 0.5rem .875rem;
     position: relative;
+    max-width: 90%;
+    padding: 0.5rem 0.875rem;
+    line-height: 1.25;
+    border-radius: 1.15rem;
     word-wrap: break-word;
   }
 
   p::before,
   p::after {
     bottom: -0.1rem;
-    content: "";
+    content: '';
     height: 1rem;
     position: absolute;
   }
@@ -121,11 +117,11 @@ const AboutImessage = styled.div`
     background-color: ${color.lightGrey};
     border-bottom-left-radius: 0.5rem;
     right: -40px;
-    transform:translate(-30px, -2px);
+    transform: translate(-30px, -2px);
     width: 10px;
   }
 
-  p[class^="from-"] {
+  p[class^='from-'] {
     margin: 0.5rem 0;
     width: fit-content;
   }
@@ -142,15 +138,19 @@ const AboutImessage = styled.div`
     margin-bottom: 0.5rem;
   }
 
-  p[class^="from-"].emoji {
+  p[class^='from-'].emoji {
     background: none;
     font-size: 2.5rem;
     animation-name: wave-animation;
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
+
+    ${mq['md']} {
+      font-size: 32px;
+    }
   }
 
-  p[class^="from-"].emoji::before {
+  p[class^='from-'].emoji::before {
     content: none;
   }
 
@@ -184,13 +184,14 @@ const AboutImessage = styled.div`
       transform: rotate(0deg);
     }
   }
-`
+`;
 
 const AboutContentRight = styled.div`
-  padding-left: 30px;
+  padding: 0 30px;
   border-left: 1px solid ${color.regularGrey};
 
   p {
+    margin-top: 0;
     margin-bottom: 20px;
   }
 
@@ -210,25 +211,25 @@ const AboutContentRight = styled.div`
     }
 
     li::before {
-      content: "▶️ ";
+      content: '▶️ ';
       color: ${color.appleBlue};
     }
   }
 
-  ${mq['sm']} {
+  ${mq['md']} {
     border-left: none;
     border-top: 1px solid ${color.regularGrey};
-    padding-left: 0 ;
     padding-top: 30px;
   }
-`
+`;
 
 const AboutContentLeft = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`
+  padding: 0 30px;
+`;
 
 const About = () => {
   return (
@@ -247,22 +248,28 @@ const About = () => {
           </AboutContentLeft>
           <AboutContentRight>
             <p>
-                Hi! I'm Goeun Lee, but I go by  <span>GO 🏃</span>, a frontend engineer based in Seoul, S. Korea. <br/>
-                I <span>enjoy creating things</span> that live on/off the internet — which explains my pottery hobby🍶.<br/>
-                My ultimate goal as a developer is to build on quality components and performant web applications for both users and fellow team mates.
+              Hi! I'm Goeun Lee, but I go by <span>GO 🏃</span>, a frontend
+              engineer based in Seoul, S. Korea. <br />I{' '}
+              <span>enjoy creating things</span> that live on/off the internet —
+              which explains my pottery hobby🍶.
+              <br />
+              My ultimate goal as a developer is to build on quality components
+              and performant web applications for both users and fellow team
+              mates.
             </p>
             <p>
-                Here are a few <span>technologies</span> I've been working with recently 👇
+              Here are a few <span>technologies</span> I've been working with
+              recently 👇
             </p>
             <ul>
-                <li>TypeScript</li>
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>HTML5 & CSS3</li>
-                <li>GraphQL & Apollo</li>
-                <li>Firebase</li>
-                <li>Express/Node</li>
-                <li>Git/Github</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>JavaScript</li>
+              <li>HTML5 & CSS3</li>
+              <li>GraphQL & Apollo</li>
+              <li>Firebase</li>
+              <li>Express/Node</li>
+              <li>Git/Github</li>
             </ul>
           </AboutContentRight>
         </AboutContent>

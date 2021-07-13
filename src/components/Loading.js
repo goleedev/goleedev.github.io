@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
+import { color } from '../theme';
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -12,21 +14,21 @@ const Container = styled.div`
   height: 100vh;
   margin: 0;
 
-  background: #FFF;
+  background: ${color.white};
   font-weight: 300;
   font-style: normal;
   font-size: 28px;
-  color: #2C2C2E;
-`
+  color: ${color.deepGrey};
+`;
 
 const ProgressBar = styled.div`
   width: 300px;
   height: 30px;
   margin: 20px 0 0;
   border-radius: 20px;
-  border: 3px solid #E5E5EA;
+  border: 3px solid ${color.lightGrey};
   background: transparent;
-`
+`;
 
 const Progress = styled.div`
   width: 20%;
@@ -35,9 +37,9 @@ const Progress = styled.div`
   border-radius: 20px;
   margin: 0;
   padding: 0;
-  background-color: #0084FF;
+  background-color: ${color.appleBlue};
   animation: loading 1s ease infinite;
-  
+
   @keyframes loading {
     0% {
       width: 10%;
@@ -49,17 +51,17 @@ const Progress = styled.div`
       width: 100%;
     }
   }
-`
+`;
 
 const Loading = () => {
-    return (
-        <Container>
-            <span>loading</span>
-            <ProgressBar>
-                <Progress />
-            </ProgressBar>
-        </Container>
-    );
+  return (
+    <Container>
+      <span>loading</span>
+      <ProgressBar>
+        <Progress />
+      </ProgressBar>
+    </Container>
+  );
 };
 
 export default Loading;

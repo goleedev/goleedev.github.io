@@ -10,11 +10,7 @@ function App() {
     setIsLoaded(true);
   }, []);
 
-  return (
-    <>
-      { isLoaded ? <AppRouter /> : <Loading />}
-    </>
-  );
+  return <>{isLoaded ? <AppRouter /> : <Loading />}</>;
 }
 
 export default App;

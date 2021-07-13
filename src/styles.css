@@ -1,73 +1,72 @@
 /* FONTS */
 @font-face {
-    font-family: 'SF Pro Regular';
-    src: url('assets/fonts/SF-Pro-Text-Regular.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'SF Pro Regular';
+  src: url('assets/fonts/SF-Pro-Text-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'SF Pro Bold';
-    src: url('assets/fonts/SF-Pro-Text-Bold.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'SF Pro Bold';
+  src: url('assets/fonts/SF-Pro-Text-Bold.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'SF Pro Heavy';
-    src: url('assets/fonts/SF-Pro-Text-Heavy.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'SF Pro Heavy';
+  src: url('assets/fonts/SF-Pro-Text-Heavy.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
-    text-decoration: none !important;
-    font-family: 'SF Pro Regular', sans-serif;
+  text-decoration: none !important;
+  font-family: 'SF Pro Regular', sans-serif;
 }
 
 html {
-    scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
-html, body {
-    margin: 0;
-    overflow-x: hidden !important;
+html,
+body {
+  margin: 0;
+  overflow-x: hidden !important;
 }
 
 #root {
-    width: 100vw !important;
+  width: 100vw !important;
 }
 
 a,
 button {
-    cursor: pointer !important;
-    outline: none;
+  cursor: pointer !important;
+  outline: none;
 }
 
-a:active, 
+a:active,
 a:focus {
-    border: none !important;
-    -moz-outline-style: none !important;
-    outline-style: none !important;
-    outline: 0 !important;
+  border: none !important;
+  outline: 0 !important;
 }
 
 input,
 select,
 textarea,
 button {
-    outline: none !important;
+  outline: none !important;
 }
 
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    box-shadow: none!important;
-    outline: none !important;
-    outline: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  outline: 0 !important;
 }
 
 ::selection {
-    background-color: #FEE9AF !important;
+  background-color: #fee9af !important;
 }

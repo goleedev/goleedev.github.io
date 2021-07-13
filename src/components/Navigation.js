@@ -1,13 +1,13 @@
 import React from 'react';
-import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import { color, mq } from "../theme";
+import { color, mq } from '../theme';
 
 const Container = styled.div`
-  transition: background-color .5s;
-`
+  transition: background-color 0.5s;
+`;
 
 const NavItems = styled.div`
   display: flex;
@@ -17,21 +17,21 @@ const NavItems = styled.div`
   left: 60px;
   top: 60px;
 
-  ${mq['sm']} {
+  ${mq['md']} {
     left: 30px;
     top: 30px;
   }
-`
+`;
 
 const NavLink = styled.a`
   color: ${color.deepGrey};
   font-size: 18px;
   padding-right: 20px;
-  
+
   :hover {
     color: ${color.appleBlue};
   }
-`
+`;
 
 const NavGithub = styled.a`
   position: absolute;
@@ -45,25 +45,25 @@ const NavGithub = styled.a`
     color: ${color.appleBlue};
   }
 
-  ${mq['sm']} {
+  ${mq['md']} {
     right: 30px;
     top: 30px;
   }
-`
+`;
 
 const Navigation = () => {
-    return (
-        <Container>
-            <NavItems>
-                <NavLink  href="#about">about</NavLink>
-                <NavLink href="#work">work</NavLink>
-                <NavLink href="https://golee.tech/">blog</NavLink>
-            </NavItems>
-            <NavGithub href="https://github.com/goleedev">
-                <FontAwesomeIcon icon={faGithub} /> golee.dev
-            </NavGithub>
-        </Container>
-    );
+  return (
+    <Container>
+      <NavItems>
+        <NavLink href="#about">about</NavLink>
+        <NavLink href="#work">work</NavLink>
+        <NavLink href="https://golee.tech/">blog</NavLink>
+      </NavItems>
+      <NavGithub href="https://github.com/goleedev">
+        <FontAwesomeIcon icon={faGithub} /> golee.dev
+      </NavGithub>
+    </Container>
+  );
 };
 
 export default Navigation;
