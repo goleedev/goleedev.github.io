@@ -12,9 +12,13 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden !important;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   color: ${color.deepGrey};
+
+  ${mq['md']} {
+    height: 100vh;
+  }
 `;
 
 const HeaderImgContainer = styled.div`
@@ -95,7 +99,7 @@ const HeaderSubTitle = styled.h5`
 
 const HeaderDes = styled.p`
   font-size: 18px;
-  margin: 5% auto 10%;
+  margin: 3% auto 8%;
 
   ${mq['md']} {
     font-size: 14px;
@@ -117,6 +121,7 @@ const HeaderBtn = styled.a`
   font-size: 20px;
   line-height: 60px;
   transition: 0.5s;
+  margin-bottom: 10%;
 
   &:hover {
     background-color: ${color.appleBlue};
@@ -129,6 +134,7 @@ const HeaderBtn = styled.a`
     font-size: 14px;
     line-height: 40px;
     border-radius: 20px;
+    margin-bottom: 0;
   }
 `;
 
