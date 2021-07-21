@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +6,7 @@ import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 
 import { color, defaultFont, smallFont, Center, mq } from '../theme';
+import ContactModal from './ContactModal';
 
 const Container = styled.footer`
   width: 100vw;
@@ -96,6 +97,15 @@ const FooterHere = styled.a`
 `;
 
 const Footer = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const openModal = () => {
+    setModalOpen(true);
+  };
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   return (
     <Container>
       <FooterContent>
@@ -132,9 +142,10 @@ const Footer = () => {
           <br />
           Contact me
           <FooterContact>
-            <FooterHere>@here</FooterHere>
+            <FooterHere onClick={openModal}>@here</FooterHere>
             🎉
           </FooterContact>
+          <ContactModal open={modalOpen} close={closeModal} />
         </FooterSub>
 
         <FooterCopyright>

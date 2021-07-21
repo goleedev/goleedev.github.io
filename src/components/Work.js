@@ -209,7 +209,7 @@ const Work = () => {
                 </WorkLink>
               </WorkContent>
               <WorkImg>
-                <img src={d.image} alt={`${i}-image`} />
+                <img src={d.image} alt={`${i}-work-pic`} />
               </WorkImg>
             </WorkCard>
           );
