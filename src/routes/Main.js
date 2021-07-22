@@ -11,7 +11,6 @@ const Main = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    console.log('loaded');
     setIsLoaded(true);
   }, []);
 

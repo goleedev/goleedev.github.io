@@ -12,13 +12,9 @@ const Container = styled.div`
   flex-direction: column;
   overflow: hidden !important;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   color: ${color.deepGrey};
-
-  ${mq['md']} {
-    height: 100vh;
-  }
 `;
 
 const HeaderImgContainer = styled.div`
@@ -28,13 +24,13 @@ const HeaderImgContainer = styled.div`
 
   background-color: ${color.appleLightYellow};
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 
   img {
     width: 100%;
     height: 100%;
-    animation: bounce 1s ease;
+    animation: bounce 1.3s ease;
   }
 
   img:hover {
@@ -77,8 +73,8 @@ const HeaderContent = styled.div`
 `;
 
 const HeaderTitle = styled.h1`
-  font-size: 52px;
-  line-height: 68px;
+  font-size: 44px;
+  line-height: 58px;
   font-family: 'SF Pro Heavy', sans-serif;
 
   ${mq['md']} {
@@ -88,7 +84,7 @@ const HeaderTitle = styled.h1`
 `;
 
 const HeaderSubTitle = styled.h5`
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: 5%;
 
@@ -99,7 +95,8 @@ const HeaderSubTitle = styled.h5`
 `;
 
 const HeaderDes = styled.p`
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 18px;
   margin: 3% auto 8%;
 
   ${mq['md']} {
@@ -112,15 +109,15 @@ const HeaderBtn = styled.a`
   display: inline-block;
   align-content: center;
   width: 200px;
-  height: 60px;
+  height: 50px;
   text-align: center;
   border-radius: 25px;
   border: none;
 
   color: ${color.white};
   background-color: ${color.deepGrey};
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 18px;
+  line-height: 50px;
   transition: 0.5s;
   margin-bottom: 10%;
 

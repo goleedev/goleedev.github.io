@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-import archiveData from '../archiveData';
+import { archiveData } from '../data';
 import { color, mq } from '../theme';
 
 const ArchiveContainer = styled.div`

@@ -66,13 +66,17 @@ const ContactContainer = styled.div`
 `;
 
 const ContactTitle = styled.h2`
-  font-weight: 700;
-  font-size: 36px;
+  font-family: 'SF Pro Bold', sans-serif;
+  font-size: 28px;
   color: ${color.deepGrey};
+
+  ${mq['md']} {
+    font-size: 24px;
+  }
 `;
 
 const ContactContentContainer = styled.div`
-  width: 100%;
+  width: 90%;
   margin: 0 auto 5%;
   padding: 0;
 `;
@@ -88,7 +92,7 @@ const ContactForm = styled.form`
     height: 32px;
     border-width: 0;
     border-bottom: 2px solid ${color.appleBlue};
-    font-size: 18px;
+    font-size: 16px;
     line-height: 18px;
   }
 
@@ -102,14 +106,15 @@ const ContactForm = styled.form`
     transform: translateY(-16px);
   }
 
-  .input-text:valid + .label {
-    -webkit-transform: translateY(-16px);
-    transform: translateY(-16px);
+  .label {
+    font-size: 18px;
+    color: ${color.deepGrey};
   }
 
   .input-text:valid + .label {
     -webkit-transform: translateY(-16px);
     transform: translateY(-16px);
+    color: ${color.appleBlue};
   }
 `;
 
@@ -145,7 +150,7 @@ const ContactBtnContainer = styled.div`
 `;
 
 const ContactCloseBtn = styled.input`
-  width: 100px;
+  width: 70px;
   height: 40px;
   border: 1px ${color.deepGrey} solid;
   text-transform: uppercase;
@@ -153,7 +158,7 @@ const ContactCloseBtn = styled.input`
   background-color: transparent;
   color: ${color.deepGrey};
   border-radius: 20px;
-  font-weight: 300;
+  font-size: 12px;
   transition: 0.5s;
   cursor: pointer;
 
@@ -164,7 +169,7 @@ const ContactCloseBtn = styled.input`
 `;
 
 const ContactSubmitBtn = styled.input`
-  width: 100px;
+  width: 70px;
   height: 40px;
 
   border: none;
@@ -172,7 +177,7 @@ const ContactSubmitBtn = styled.input`
   text-transform: uppercase;
   background-color: ${color.deepGrey};
   color: ${color.white};
-  font-weight: 300;
+  font-size: 12px;
   cursor: pointer;
   transition: 0.5s;
 
@@ -220,8 +225,12 @@ const ContactModal = (props) => {
     event.target.reset();
   };
 
+  const onKeyClose = (event) => {
+    if (event.keyCode === 27) close();
+  };
+
   return (
-    <Modal openModal={open}>
+    <Modal openModal={open} onKeyUp={onKeyClose}>
       {open ? (
         <ContactContainer id="contact">
           <ContactTitle>🎉 Let's Get in Touch! 🎉</ContactTitle>
@@ -240,6 +249,7 @@ const ContactModal = (props) => {
                     id="name"
                     className="input-text js-input"
                     type="text"
+                    autoFocus={true}
                     required
                   />
                   <ContactFormLabel className="label" htmlFor="name">

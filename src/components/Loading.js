@@ -45,7 +45,7 @@ const Progress = styled.div`
       width: 10%;
     }
     50% {
-      width: 30%;
+      width: 70%;
     }
     87.5% {
       width: 100%;

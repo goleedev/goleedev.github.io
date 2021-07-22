@@ -10,8 +10,9 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin: 0 auto;
+  user-select: none;
 `;
 
 const AboutHeader = styled.div`
@@ -31,6 +32,10 @@ const AboutTitle = styled.h2`
   font-weight: 700;
   font-family: 'SF Pro Bold', sans-serif;
   font-size: 36px;
+
+  ${mq['md']} {
+    font-size: 28px;
+  }
 `;
 
 const AboutContentContainer = styled.div`

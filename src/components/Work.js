@@ -9,7 +9,7 @@ import {
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { boxShadow, color, mq } from '../theme';
-import workData from '../workData';
+import { workData } from '../data';
 
 const Container = styled.div`
   display: flex;
@@ -36,6 +36,7 @@ const WorkTitle = styled.h2`
 
   ${mq['md']} {
     left: 30px;
+    font-size: 28px;
   }
 `;
 
@@ -57,12 +58,14 @@ const WorkArchive = styled.span`
 
   ${mq['md']} {
     left: 30px;
+    font-size: 16px;
   }
 `;
 
 const WorkCard = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
   text-align: left;
   max-width: 550px;
@@ -74,7 +77,6 @@ const WorkCard = styled.div`
   box-shadow: ${boxShadow.BoldShadow};
   background-color: ${color.white};
   color: ${color.regularGrey};
-  z-index: -1;
 
   ${mq['md']} {
     width: 90%;
@@ -83,10 +85,11 @@ const WorkCard = styled.div`
 `;
 
 const WorkContent = styled.div`
-  width: 65%;
+  width: 55%;
   height: 100%;
   padding: 5%;
   margin: 0;
+  pointer-events: none;
 
   ${mq['md']} {
     width: 90%;
@@ -97,8 +100,8 @@ const WorkName = styled.h2`
   width: 75%;
   margin: 10px 0;
 
+  font-family: "SF Pro Bold", sans-serif;
   color: ${color.deepGrey};
-  font-weight: 700;
 
   ${mq['md']} {
     font-size: 32px;
@@ -126,24 +129,9 @@ const WorkStack = styled.div`
     margin-right: 5px;
     font-size: 14px;
     font-family: 'Source Code Pro', monospace !important;
-    background-color: ${color.appleMint};
+    background-color: ${color.regularGrey};
     color: ${color.white};
     border-radius: 5px;
-  }
-`;
-
-const WorkLink = styled.div`
-  margin-top: 5px;
-
-  a {
-    margin-right: 5px;
-    color: ${color.appleBlue};
-    z-index: 1;
-  }
-
-  a > svg {
-    width: 32px;
-    height: 32px;
   }
 `;
 
@@ -151,6 +139,7 @@ const WorkImg = styled.div`
   position: absolute;
   top: -30px;
   right: -180px;
+  pointer-events: none;
 
   img {
     border-radius: 10px;
@@ -171,6 +160,31 @@ const WorkImg = styled.div`
   }
 `;
 
+const WorkLinkSpace = styled.div`
+  width: 36px;
+  height: 36px;
+`;
+
+const WorkLink = styled.div`
+  position: relative;
+  cursor: pointer;
+  bottom: 65px;
+  left: -226px;
+
+  a {
+    margin-right: 5px;
+    color: ${color.appleBlue};
+  }
+  
+  ${mq['md']} {
+    bottom: 300px;
+  }
+  ${mq['sm']} {
+    bottom: 260px;
+    left: -35%;
+  }
+`;
+
 const Work = () => {
   return (
     <div id="work">
@@ -185,33 +199,32 @@ const Work = () => {
         </WorkHeader>
         {workData.map((d, i) => {
           return (
-            <WorkCard key={`${i}-data`}>
+              <>
+            <WorkCard key={`${i}-work-card`}>
               <WorkContent>
                 <WorkSub>Featured Project · {d.type}</WorkSub>
                 <WorkName>{d.project}</WorkName>
                 <p>{d.description}</p>
-                <WorkStack className="product-stack">
+                <WorkStack>
                   {d.stack.map((s, i) => {
                     return <span key={`${i}-stack`}>{s}</span>;
                   })}
                 </WorkStack>
-                <WorkLink>
-                  {d.github && (
-                    <a href={d.github}>
-                      <FontAwesomeIcon icon={faGithub} />
-                    </a>
-                  )}
-                  {d.website && (
-                    <a href={d.website}>
-                      <FontAwesomeIcon icon={faExternalLinkAlt} />
-                    </a>
-                  )}
-                </WorkLink>
+                <WorkLinkSpace />
               </WorkContent>
               <WorkImg>
                 <img src={d.image} alt={`${i}-work-pic`} />
               </WorkImg>
             </WorkCard>
+          <WorkLink>
+            <a href={d.github} target={"_blank"}>
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+            <a href={d.website} target={"_blank"}>
+              <FontAwesomeIcon icon={faExternalLinkAlt} />
+            </a>
+          </WorkLink>
+              </>
           );
         })}
       </Container>
