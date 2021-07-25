@@ -242,16 +242,28 @@ const About = () => {
       <AboutHeader>
         <AboutTitle>About Me</AboutTitle>
       </AboutHeader>
-      <AboutContentContainer>
+      <AboutContentContainer
+        data-aos="fade-up"
+        data-aos-delay="50"
+        data-aos-easing="ease-in-out"
+      >
         <AboutContent>
-          <AboutContentLeft>
+          <AboutContentLeft
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-easing="ease-in-out"
+          >
             <AboutContentImg src={me} alt={'my-pic'} />
             <AboutImessage>
               <p className="from-me">Let's get to know me better!</p>
               <p className="from-me emoji no-tail">👋</p>
             </AboutImessage>
           </AboutContentLeft>
-          <AboutContentRight>
+          <AboutContentRight
+            data-aos="fade-left"
+            data-aos-delay="150"
+            data-aos-easing="ease-in-out"
+          >
             <p>
               Hi! I'm Goeun Lee, but I go by <span>GO 🏃</span>, a frontend
               engineer based in Seoul, S. Korea. <br />I{' '}

@@ -100,7 +100,7 @@ const WorkName = styled.h2`
   width: 75%;
   margin: 10px 0;
 
-  font-family: "SF Pro Bold", sans-serif;
+  font-family: 'SF Pro Bold', sans-serif;
   color: ${color.deepGrey};
 
   ${mq['md']} {
@@ -175,7 +175,7 @@ const WorkLink = styled.div`
     margin-right: 5px;
     color: ${color.appleBlue};
   }
-  
+
   ${mq['md']} {
     bottom: 300px;
   }
@@ -199,32 +199,41 @@ const Work = () => {
         </WorkHeader>
         {workData.map((d, i) => {
           return (
-              <>
-            <WorkCard key={`${i}-work-card`}>
-              <WorkContent>
-                <WorkSub>Featured Project · {d.type}</WorkSub>
-                <WorkName>{d.project}</WorkName>
-                <p>{d.description}</p>
-                <WorkStack>
-                  {d.stack.map((s, i) => {
-                    return <span key={`${i}-stack`}>{s}</span>;
-                  })}
-                </WorkStack>
-                <WorkLinkSpace />
-              </WorkContent>
-              <WorkImg>
-                <img src={d.image} alt={`${i}-work-pic`} />
-              </WorkImg>
-            </WorkCard>
-          <WorkLink>
-            <a href={d.github} target={"_blank"}>
-              <FontAwesomeIcon icon={faGithub} />
-            </a>
-            <a href={d.website} target={"_blank"}>
-              <FontAwesomeIcon icon={faExternalLinkAlt} />
-            </a>
-          </WorkLink>
-              </>
+            <>
+              <WorkCard
+                key={`${i}-work-card`}
+                data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
+                data-aos-delay="150"
+                data-aos-easing="ease-in-out"
+              >
+                <WorkContent>
+                  <WorkSub>Featured Project · {d.type}</WorkSub>
+                  <WorkName>{d.project}</WorkName>
+                  <p>{d.description}</p>
+                  <WorkStack>
+                    {d.stack.map((s, i) => {
+                      return <span key={`${i}-stack`}>{s}</span>;
+                    })}
+                  </WorkStack>
+                  <WorkLinkSpace />
+                </WorkContent>
+                <WorkImg>
+                  <img src={d.image} alt={`${i}-work-pic`} />
+                </WorkImg>
+              </WorkCard>
+              <WorkLink
+                data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
+                data-aos-delay="50"
+                data-aos-easing="ease-in-out"
+              >
+                <a href={d.github} target={'_blank'} rel="noreferrer">
+                  <FontAwesomeIcon icon={faGithub} />
+                </a>
+                <a href={d.website} target={'_blank'} rel="noreferrer">
+                  <FontAwesomeIcon icon={faExternalLinkAlt} />
+                </a>
+              </WorkLink>
+            </>
           );
         })}
       </Container>
