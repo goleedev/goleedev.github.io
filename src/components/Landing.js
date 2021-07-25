@@ -20,7 +20,7 @@ const Container = styled.div`
 const HeaderImgContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 10% !important;
+  margin-top: 8% !important;
 
   background-color: ${color.appleLightYellow};
   border-radius: 50%;
@@ -67,7 +67,7 @@ const HeaderImgContainer = styled.div`
 `;
 
 const HeaderContent = styled.div`
-  padding-top: 5%;
+  padding-top: 3%;
   text-align: center;
   color: ${color.deepGrey};
 `;
@@ -140,22 +140,26 @@ const Landing = () => {
   return (
     <Container>
       <Navigation />
-      <HeaderImgContainer>
+      <HeaderImgContainer data-aos="fade-up" data-aos-delay="150">
         <img src={me} alt="my-pic" />
       </HeaderImgContainer>
       <HeaderContent>
-        <HeaderSubTitle>Hi, I’m GO 🤘</HeaderSubTitle>
-        <HeaderTitle>
+        <HeaderSubTitle data-aos="fade-up" data-aos-delay="250">
+          Hi, I’m GO 🤘
+        </HeaderSubTitle>
+        <HeaderTitle data-aos="fade-up" data-aos-delay="300">
           Building quality components
           <br />
           and performant web apps
         </HeaderTitle>
-        <HeaderDes>
+        <HeaderDes data-aos="fade-up" data-aos-delay="250">
           <b>Junior Frontend Developer</b> based in Seoul, S.Korea.
           <br />
           CS student @UOL in the ML/AI specialism.
         </HeaderDes>
-        <HeaderBtn href={'#work'}>Recent Work</HeaderBtn>
+        <HeaderBtn href={'#work'} data-aos="fade-up" data-aos-delay="450">
+          Recent Work
+        </HeaderBtn>
       </HeaderContent>
     </Container>
   );
