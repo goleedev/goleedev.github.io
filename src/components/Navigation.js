@@ -57,7 +57,7 @@ const Navigation = () => {
       <NavItems>
         <NavLink href="#about">about</NavLink>
         <NavLink href="#work">work</NavLink>
-        {/*<NavLink href="https://golee.tech/">blog</NavLink>*/}
+        <NavLink href="https://golee.tech/">blog</NavLink>
       </NavItems>
       <NavGithub href="https://github.com/goleedev">
         <FontAwesomeIcon icon={faGithub} /> golee.dev
