@@ -4,24 +4,24 @@ import styled from '@emotion/styled';
 import { boxShadow, color, mq } from '../theme';
 import ContactModal from './ContactModal';
 
-const ContactBtnContainer = styled.button`
+const ContactBtnContainer = styled.div`
   position: fixed;
+  text-align: center;
   width: 40px;
   height: 40px;
-  text-align: center;
   right: 60px;
   bottom: 60px;
   
   span {
-    width: 36px;
-    height: 36px;
     font-size: 28px;
+    line-height: 40px;
   }
 
   background-color: ${color.white};
   box-shadow: ${boxShadow.BoldShadow};
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 
   ${mq['md']} {
     right: 30px;

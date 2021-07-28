@@ -180,10 +180,20 @@ const WorkLink = styled.div`
   ${mq['md']} {
     bottom: 300px;
   }
+
+  @media (max-width: 600px) {
+    left: -37%;
+  } 
+  
   ${mq['sm']} {
-    bottom: 255px;
+    bottom: 270px;
     left: -35%;
   }
+
+  @media (max-width: 380px) {
+    bottom: 250px;
+  }
+
 `;
 
 const Work = () => {
