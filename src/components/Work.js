@@ -93,6 +93,7 @@ const WorkContent = styled.div`
 
   ${mq['md']} {
     width: 90%;
+    height: 100%;
   }
 `;
 
@@ -180,64 +181,62 @@ const WorkLink = styled.div`
     bottom: 300px;
   }
   ${mq['sm']} {
-    bottom: 260px;
+    bottom: 255px;
     left: -35%;
   }
 `;
 
 const Work = () => {
   return (
-    <div id="work">
-      <Container>
-        <WorkHeader>
-          <WorkTitle>Recent Work</WorkTitle>
-          <Link to="/archive">
-            <WorkArchive>
-              <FontAwesomeIcon icon={faFolderOpen} /> more projects
-            </WorkArchive>
-          </Link>
-        </WorkHeader>
-        {workData.map((d, i) => {
-          return (
-            <>
-              <WorkCard
-                key={`${i}-work-card`}
-                data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
-                data-aos-delay="150"
-                data-aos-easing="ease-in-out"
-              >
-                <WorkContent>
-                  <WorkSub>Featured Project · {d.type}</WorkSub>
-                  <WorkName>{d.project}</WorkName>
-                  <p>{d.description}</p>
-                  <WorkStack>
-                    {d.stack.map((s, i) => {
-                      return <span key={`${i}-stack`}>{s}</span>;
-                    })}
-                  </WorkStack>
-                  <WorkLinkSpace />
-                </WorkContent>
-                <WorkImg>
-                  <img src={d.image} alt={`${i}-work-pic`} />
-                </WorkImg>
-              </WorkCard>
-              <WorkLink
-                data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
-                data-aos-delay="50"
-                data-aos-easing="ease-in-out"
-              >
-                <a href={d.github} target={'_blank'} rel="noreferrer">
-                  <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href={d.website} target={'_blank'} rel="noreferrer">
-                  <FontAwesomeIcon icon={faExternalLinkAlt} />
-                </a>
-              </WorkLink>
-            </>
-          );
-        })}
-      </Container>
-    </div>
+    <Container id="work">
+      <WorkHeader>
+        <WorkTitle>Recent Work</WorkTitle>
+        <Link to="/archive">
+          <WorkArchive>
+            <FontAwesomeIcon icon={faFolderOpen} /> more projects
+          </WorkArchive>
+        </Link>
+      </WorkHeader>
+      {workData.map((d, i) => {
+        return (
+          <>
+            <WorkCard
+              key={`${i}-work-card`}
+              data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
+              data-aos-delay="150"
+              data-aos-easing="ease-in-out"
+            >
+              <WorkContent>
+                <WorkSub>Featured Project · {d.type}</WorkSub>
+                <WorkName>{d.project}</WorkName>
+                <p>{d.description}</p>
+                <WorkStack>
+                  {d.stack.map((s, i) => {
+                    return <span key={`${i}-stack`}>{s}</span>;
+                  })}
+                </WorkStack>
+                <WorkLinkSpace />
+              </WorkContent>
+              <WorkImg>
+                <img src={d.image} alt={`${i}-work-pic`} />
+              </WorkImg>
+            </WorkCard>
+            <WorkLink
+              data-aos={i % 2 === 0 ? 'fade-left' : 'fade-right'}
+              data-aos-delay="50"
+              data-aos-easing="ease-in-out"
+            >
+              <a href={d.github} target={'_blank'} rel="noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              <a href={d.website} target={'_blank'} rel="noreferrer">
+                <FontAwesomeIcon icon={faExternalLinkAlt} />
+              </a>
+            </WorkLink>
+          </>
+        );
+      })}
+    </Container>
   );
 };
 

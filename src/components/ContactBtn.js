@@ -11,10 +11,15 @@ const ContactBtnContainer = styled.button`
   text-align: center;
   right: 60px;
   bottom: 60px;
+  
+  span {
+    width: 36px;
+    height: 36px;
+    font-size: 28px;
+  }
 
   background-color: ${color.white};
   box-shadow: ${boxShadow.BoldShadow};
-  font-size: 24px;
   border-radius: 10px;
   border: none;
 
@@ -36,7 +41,9 @@ const ContactBtn = () => {
 
   return (
     <>
-      <ContactBtnContainer onClick={openModal}>📝</ContactBtnContainer>
+      <ContactBtnContainer onClick={openModal}>
+        <span>📧</span>
+      </ContactBtnContainer>
       <ContactModal open={modalOpen} close={closeModal} />
     </>
   );

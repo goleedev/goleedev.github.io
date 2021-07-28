@@ -31,7 +31,7 @@ const FooterTitle = styled.h2`
   }
 
   ${mq['md']} {
-    font-size: 28px !important;
+    font-size: 24px !important;
 
     span {
       font-size: 36px;

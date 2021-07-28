@@ -78,8 +78,8 @@ const HeaderTitle = styled.h1`
   font-family: 'SF Pro Heavy', sans-serif;
 
   ${mq['md']} {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 24px;
+    line-height: 32px;
   }
 `;
 
@@ -89,8 +89,8 @@ const HeaderSubTitle = styled.h5`
   margin-bottom: 5%;
 
   ${mq['md']} {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 22px;
   }
 `;
 
@@ -127,10 +127,10 @@ const HeaderBtn = styled.a`
   }
 
   ${mq['md']} {
-    width: 150px;
-    height: 40px;
+    width: 120px;
+    height: 35px;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 35px;
     border-radius: 20px;
     margin-bottom: 0;
   }

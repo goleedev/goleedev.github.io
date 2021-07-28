@@ -13,6 +13,10 @@ const Container = styled.div`
   height: 100vh;
   margin: 0 auto;
   user-select: none;
+  
+  ${mq['md']} {
+    height: 100%;
+  }
 `;
 
 const AboutHeader = styled.div`
