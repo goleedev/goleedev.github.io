@@ -42,10 +42,10 @@ const Progress = styled.div`
 
   @keyframes loading {
     0% {
-      width: 10%;
+      width: 5%;
     }
     50% {
-      width: 70%;
+      width: 30%;
     }
     87.5% {
       width: 100%;
