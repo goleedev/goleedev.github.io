@@ -3,7 +3,7 @@
 This is apple-inspired portfolio SPA made by GO Lee (@goleedev) using React.
 
 ### 👀 How It Looks
-![Portfolio](./src/assets/images/portfolio.png)
+![Portfolio](./src/portfolio.png)
 
 ### 📦 What It Contains
 - Animations
