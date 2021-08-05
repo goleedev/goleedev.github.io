@@ -5,6 +5,25 @@ import project2 from './assets/images/github-search.png';
 export const archiveData = [
   {
     year: '2021',
+    title: 'Flash Chat',
+    built: ['Flutter', 'Firebase'],
+    github: 'https://github.com/goleedev/flutter-study/tree/main/flash-chat-flutter',
+  },
+  {
+    year: '2021',
+    title: 'vue-todo',
+    built: ['Vue'],
+    github: 'https://github.com/goleedev/vue-todo',
+  },
+  {
+    year: '2021',
+    title: 'goleedevlog',
+    built: ['Next', 'Styled Components'],
+    github: 'https://github.com/goleedev/goleedevlog',
+    link: 'https://golee.tech',
+  },
+  {
+    year: '2021',
     title: 'TypeChain',
     built: ['TypeScript'],
     github: 'https://github.com/goleedev/typechain',
