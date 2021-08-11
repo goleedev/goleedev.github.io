@@ -5,6 +5,12 @@ import project2 from './assets/images/github-search.png';
 export const archiveData = [
   {
     year: '2021',
+    title: 'Todoey',
+    built: ['Flutter'],
+    github: 'https://github.com/goleedev/flutter-study/tree/main/todoey_flutter',
+  },
+  {
+    year: '2021',
     title: 'Flash Chat',
     built: ['Flutter', 'Firebase'],
     github: 'https://github.com/goleedev/flutter-study/tree/main/flash-chat-flutter',
@@ -37,24 +43,15 @@ export const archiveData = [
   },
   {
     year: '2020',
-    title: 'Ceramic Oh',
-    built: ['Firebase', 'React', 'JavaScript', 'CSS'],
-    github: 'https://github.com/goleedev/ohsujin-ceramic',
-    link: 'https://ohsujin-ceramic.web.app/',
-  },
-  {
-    year: '2020',
     title: 'Portfolio v2',
     built: ['React', 'JavaScript', 'Github'],
     github: 'https://github.com/goleedev/golee',
-    link: 'https://goleedev.github.io/',
   },
   {
     year: '2020',
     title: 'Portfolio v1',
     built: ['HTML', 'CSS', 'JavaScript', 'Github'],
     github: 'https://github.com/goleedev/old8',
-    link: 'https://goleedev.github.io/old8/',
   },
   {
     year: '2020',
