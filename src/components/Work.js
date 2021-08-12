@@ -183,8 +183,8 @@ const WorkLink = styled.div`
 
   @media (max-width: 600px) {
     left: -37%;
-  } 
-  
+  }
+
   ${mq['sm']} {
     bottom: 270px;
     left: -35%;
@@ -193,7 +193,6 @@ const WorkLink = styled.div`
   @media (max-width: 380px) {
     bottom: 250px;
   }
-
 `;
 
 const Work = () => {
@@ -228,7 +227,7 @@ const Work = () => {
                 <WorkLinkSpace />
               </WorkContent>
               <WorkImg>
-                <img src={d.image} alt={`${i}-work-pic`} />
+                <img src={d.image} loading="lazy" alt={`${i}-work-pic`} />
               </WorkImg>
             </WorkCard>
             <WorkLink

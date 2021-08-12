@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { color, mq } from '../theme';
 import me from '../assets/images/memoji.png';
 import Navigation from './Navigation';
+import LazyImage from './LazyImage';
 
 const Container = styled.div`
   display: flex;
@@ -141,7 +142,7 @@ const Landing = () => {
     <Container>
       <Navigation />
       <HeaderImgContainer data-aos="fade-up" data-aos-delay="150">
-        <img src={me} alt="my-pic" />
+        <LazyImage src={me} alt="my-pic" />
       </HeaderImgContainer>
       <HeaderContent>
         <HeaderSubTitle data-aos="fade-up" data-aos-delay="250">
