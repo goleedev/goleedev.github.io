@@ -154,9 +154,9 @@ const Landing = () => {
           and performant web apps
         </HeaderTitle>
         <HeaderDes data-aos="fade-up" data-aos-delay="250">
-          <b>Junior Frontend Developer</b> based in Seoul, S.Korea.
+          <b>Junior Software Engineer</b> based in Seoul, S.Korea.
           <br />
-          CS student @UOL in the ML/AI specialism.
+          CS major @UOL in the ML/AI specialism.
         </HeaderDes>
         <HeaderBtn href={'#work'} data-aos="fade-up" data-aos-delay="450">
           Recent Work
