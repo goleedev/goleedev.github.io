@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import React from "react";
+import styled from "@emotion/styled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-import { color, mq } from '../theme';
+import { color, mq } from "../theme";
 
 const Container = styled.div`
   transition: background-color 0.5s;
@@ -17,7 +17,7 @@ const NavItems = styled.div`
   left: 60px;
   top: 60px;
 
-  ${mq['md']} {
+  ${mq["md"]} {
     left: 30px;
     top: 30px;
   }
@@ -45,7 +45,7 @@ const NavGithub = styled.a`
     color: ${color.appleBlue};
   }
 
-  ${mq['md']} {
+  ${mq["md"]} {
     right: 30px;
     top: 30px;
   }
@@ -57,7 +57,7 @@ const Navigation = () => {
       <NavItems>
         <NavLink href="#about">about</NavLink>
         <NavLink href="#work">work</NavLink>
-        <NavLink href="https://golee.tech/posts">blog</NavLink>
+        <NavLink href="https://golee.tech/blog">blog</NavLink>
       </NavItems>
       <NavGithub href="https://github.com/goleedev">
         <FontAwesomeIcon icon={faGithub} /> golee.dev
